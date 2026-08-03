@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Atlas Outdoor — Cart</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body>
+
+<header class="app-bar">
+    <div class="brand">ATLAS<span>·</span>OUTDOOR</div>
+    <nav>
+        <span data-testid="current-user" style="font-size:13px;color:#8b98a5"></span>
+        <a href="inventory.html" data-testid="continue-shopping">Continue shopping</a>
+        <a href="#" data-testid="logout">Sign out</a>
+    </nav>
+</header>
+
+<main>
+    <h1 data-testid="page-title">Your cart</h1>
+    <p class="subtitle">Prices include VAT where applicable.</p>
+
+    <section class="card">
+        <div data-testid="cart-lines"></div>
+        <p data-testid="empty-cart" style="display:none;color:#8b98a5">Your cart is empty.</p>
+
+        <div class="totals" data-testid="totals" style="display:none">
+            <div><span>Subtotal</span><span data-testid="subtotal"></span></div>
+            <div><span>Tax (8%)</span><span data-testid="tax"></span></div>
+            <div class="grand"><span>Total</span><span data-testid="grand-total"></span></div>
+        </div>
+
+        <button class="full-width" id="btn-checkout" data-volatile-id data-testid="checkout"
+                style="margin-top:22px">Proceed to checkout</button>
+        <div class="error-banner" data-testid="error-message" style="display:none"></div>
+    </section>
+</main>
+
+<script src="assets/atlas.js"></script>
+<script>
+    function render() {
+        const lines = Atlas.cart.read();
+        const container = document.querySelector("[data-testid='cart-lines']");
+
+        container.innerHTML = lines.map(line => `
+            <div class="cart-line" data-testid="cart-line" data-product-id="${line.id}">
+                <div>
+                    <div data-testid="line-name">${line.name}</div>
+                    <div class="badge-stock">Quantity: <span data-testid="line-quantity">${line.quantity}</span></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:16px">
+                    <span data-testid="line-total">${Atlas.money(line.price * line.quantity)}</span>
+                    <button class="danger" data-testid="remove-line" data-product-id="${line.id}">Remove</button>
+                </div>
+            </div>`).join("");
+
+        document.querySelector("[data-testid='empty-cart']").style.display = lines.length ? "none" : "block";
+        document.querySelector("[data-testid='totals']").style.display = lines.length ? "block" : "none";
+        document.querySelector("[data-testid='checkout']").disabled = lines.length === 0;
+
+        document.querySelector("[data-testid='subtotal']").textContent = Atlas.money(Atlas.cart.subtotal());
+        document.querySelector("[data-testid='tax']").textContent = Atlas.money(Atlas.cart.tax());
+        document.querySelector("[data-testid='grand-total']").textContent = Atlas.money(Atlas.cart.total());
+
+        container.querySelectorAll("[data-testid='remove-line']").forEach(button =>
+            button.addEventListener("click", () => {
+                Atlas.cart.remove(button.dataset.productId);
+                render();
+            }));
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+        if (!Atlas.session.requireLogin()) {
+            return;
+        }
+        render();
+
+        document.querySelector("[data-testid='checkout']").addEventListener("click", () => {
+            const user = Atlas.session.current();
+            // Business rule worth a test: a read-only account may browse and fill
+            // a cart, but may not place an order.
+            if (!user.roles.includes("CHECKOUT")) {
+                Atlas.showError("Your account is not allowed to place orders. Contact your store manager.");
+                return;
+            }
+            window.location.href = "checkout-info.html";
+        });
+    });
+</script>
+</body>
+</html>

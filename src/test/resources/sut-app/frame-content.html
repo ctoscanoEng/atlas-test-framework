@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Release notes</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body style="background:#0d1218">
+<main style="padding:16px">
+    <p data-testid="frame-heading" style="margin:0 0 8px;font-weight:600">Release 3.4 — inventory service</p>
+    <p data-testid="frame-body" style="margin:0;color:#8b98a5;font-size:13px">
+        Stock levels are now refreshed every 30 seconds instead of on page load.
+    </p>
+    <button data-testid="frame-button" class="secondary" style="margin-top:10px"
+            onclick="document.querySelector('[data-testid=frame-body]').textContent='Acknowledged by the operator'">
+        Acknowledge
+    </button>
+</main>
+</body>
+</html>

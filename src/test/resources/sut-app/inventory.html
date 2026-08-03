@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Atlas Outdoor — Catalogue</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body>
+
+<header class="app-bar">
+    <div class="brand">ATLAS<span>·</span>OUTDOOR</div>
+    <nav>
+        <span data-testid="current-user" style="font-size:13px;color:#8b98a5"></span>
+        <a href="cart.html" data-testid="cart-link">Cart<span class="cart-pill" data-testid="cart-count" style="display:none">0</span></a>
+        <a href="widgets.html" data-testid="nav-widgets">Playground</a>
+        <a href="#" data-testid="logout">Sign out</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Catalogue</h1>
+    <p class="subtitle">Loaded over HTTP from <code>/api/products</code> — rendering is asynchronous on purpose.</p>
+
+    <div class="toolbar">
+        <select data-testid="filter-category" id="filter-category">
+            <option value="all">All categories</option>
+            <option value="backpacks">Backpacks</option>
+            <option value="clothing">Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="equipment">Equipment</option>
+        </select>
+
+        <select data-testid="sort-order" id="sort-order">
+            <option value="name-asc">Name (A → Z)</option>
+            <option value="name-desc">Name (Z → A)</option>
+            <option value="price-asc">Price (low → high)</option>
+            <option value="price-desc">Price (high → low)</option>
+        </select>
+
+        <span class="badge-stock" data-testid="result-count"></span>
+    </div>
+
+    <div class="spinner" data-testid="loading-indicator"></div>
+    <div class="grid" data-testid="product-grid" style="display:none"></div>
+</main>
+
+<script src="assets/atlas.js"></script>
+<script>
+    let catalogue = [];
+
+    function render() {
+        const category = document.querySelector("[data-testid='filter-category']").value;
+        const order = document.querySelector("[data-testid='sort-order']").value;
+
+        let visible = catalogue.filter(p => category === "all" || p.category === category);
+        const [field, direction] = order.split("-");
+        visible.sort((a, b) => {
+            const result = field === "price" ? a.price - b.price : a.name.localeCompare(b.name);
+            return direction === "asc" ? result : -result;
+        });
+
+        const grid = document.querySelector("[data-testid='product-grid']");
+        grid.innerHTML = visible.map(product => `
+            <article class="card product" data-testid="product-card" data-product-id="${product.id}">
+                <div class="name" data-testid="product-name">${product.name}</div>
+                <div class="desc" data-testid="product-description">${product.description}</div>
+                <div class="price" data-testid="product-price">€ ${product.price.toFixed(2)}</div>
+                <div class="badge-stock ${product.stock === 0 ? 'out-of-stock' : ''}" data-testid="product-stock">
+                    ${product.stock === 0 ? 'Out of stock' : product.stock + ' in stock'}
+                </div>
+                <button id="add-${product.id}" data-volatile-id
+                        data-testid="add-to-cart"
+                        data-product-id="${product.id}"
+                        ${product.stock === 0 ? 'disabled' : ''}>
+                    ${product.stock === 0 ? 'Unavailable' : 'Add to cart'}
+                </button>
+            </article>`).join("");
+
+        document.querySelector("[data-testid='result-count']").textContent =
+            visible.length + " of " + catalogue.length + " products";
+
+        Atlas.scrambleVolatileIds();
+
+        grid.querySelectorAll("[data-testid='add-to-cart']").forEach(button => {
+            button.addEventListener("click", () => {
+                const product = catalogue.find(p => p.id === button.dataset.productId);
+                Atlas.cart.add(product);
+                button.textContent = "Added ✓";
+                setTimeout(() => { button.textContent = "Add to cart"; }, 900);
+            });
+        });
+    }
+
+    window.addEventListener("DOMContentLoaded", async () => {
+        if (!Atlas.session.requireLogin()) {
+            return;
+        }
+        const response = await fetch("/api/products");
+        const payload = await response.json();
+        catalogue = payload.products;
+
+        // Variable latency: anything between 250 ms and 900 ms, so a suite that
+        // relies on fixed sleeps will be flaky by construction.
+        const latency = 250 + Math.floor(Math.random() * 650);
+        setTimeout(() => {
+            document.querySelector("[data-testid='loading-indicator']").remove();
+            document.querySelector("[data-testid='product-grid']").style.display = "grid";
+            render();
+        }, latency);
+
+        document.querySelector("[data-testid='filter-category']").addEventListener("change", render);
+        document.querySelector("[data-testid='sort-order']").addEventListener("change", render);
+    });
+</script>
+</body>
+</html>

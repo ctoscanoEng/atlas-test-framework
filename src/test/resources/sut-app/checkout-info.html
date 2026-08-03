@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Atlas Outdoor — Checkout</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body>
+
+<header class="app-bar">
+    <div class="brand">ATLAS<span>·</span>OUTDOOR</div>
+    <nav>
+        <span data-testid="current-user" style="font-size:13px;color:#8b98a5"></span>
+        <a href="cart.html" data-testid="back-to-cart">Back to cart</a>
+    </nav>
+</header>
+
+<main>
+    <div class="steps">
+        <span class="active" data-testid="step-1">1 · Your details</span>
+        <span>›</span><span data-testid="step-2">2 · Review</span>
+        <span>›</span><span data-testid="step-3">3 · Confirmation</span>
+    </div>
+
+    <h1>Delivery details</h1>
+    <p class="subtitle">All fields marked with * are mandatory.</p>
+
+    <section class="card" style="max-width:520px">
+        <form id="checkout-form" data-testid="checkout-form" autocomplete="off">
+            <label for="first-name">First name *</label>
+            <input type="text" id="first-name" data-testid="first-name">
+
+            <label for="last-name">Last name *</label>
+            <input type="text" id="last-name" data-testid="last-name">
+
+            <label for="email">Email *</label>
+            <input type="text" id="email" data-testid="email">
+
+            <label for="address">Address</label>
+            <input type="text" id="address" data-testid="address">
+
+            <label for="city">City</label>
+            <input type="text" id="city" data-testid="city">
+
+            <label for="postcode">Postcode *</label>
+            <input type="text" id="postcode" data-testid="postcode">
+
+            <button type="submit" id="btn-continue" data-volatile-id data-testid="continue" class="full-width">
+                Continue
+            </button>
+        </form>
+        <div class="error-banner" data-testid="error-message" style="display:none"></div>
+    </section>
+</main>
+
+<script src="assets/atlas.js"></script>
+<script>
+    const EMAIL_PATTERN = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+    window.addEventListener("DOMContentLoaded", () => {
+        if (!Atlas.session.requireLogin()) {
+            return;
+        }
+
+        document.getElementById("checkout-form").addEventListener("submit", event => {
+            event.preventDefault();
+            const value = id => document.querySelector(`[data-testid='${id}']`).value.trim();
+
+            const missing = ["first-name", "last-name", "email", "postcode"]
+                .filter(field => value(field) === "")
+                .map(field => field.replace("-", " "));
+
+            if (missing.length) {
+                Atlas.showError("Please complete the following fields: " + missing.join(", ") + ".");
+                return;
+            }
+            if (!EMAIL_PATTERN.test(value("email"))) {
+                Atlas.showError("'" + value("email") + "' is not a valid email address.");
+                return;
+            }
+
+            sessionStorage.setItem("atlas.customer", JSON.stringify({
+                firstName: value("first-name"),
+                lastName: value("last-name"),
+                email: value("email"),
+                address: value("address"),
+                city: value("city"),
+                postcode: value("postcode")
+            }));
+            window.location.href = "checkout-review.html";
+        });
+    });
+</script>
+</body>
+</html>

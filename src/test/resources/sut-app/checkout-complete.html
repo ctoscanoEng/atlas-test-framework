@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Atlas Outdoor — Order confirmed</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body>
+
+<header class="app-bar">
+    <div class="brand">ATLAS<span>·</span>OUTDOOR</div>
+    <nav>
+        <span data-testid="current-user" style="font-size:13px;color:#8b98a5"></span>
+        <a href="inventory.html" data-testid="back-home">Back to catalogue</a>
+    </nav>
+</header>
+
+<main>
+    <div class="steps">
+        <span data-testid="step-1">1 · Your details</span>
+        <span>›</span><span data-testid="step-2">2 · Review</span>
+        <span>›</span><span class="active" data-testid="step-3">3 · Confirmation</span>
+    </div>
+
+    <section class="card" style="max-width:560px">
+        <h1 data-testid="confirmation-title">Thank you, your order is confirmed</h1>
+        <p class="subtitle">A confirmation email is on its way.</p>
+
+        <div class="totals">
+            <div><span>Order reference</span><span data-testid="order-reference"></span></div>
+            <div><span>Items</span><span data-testid="order-items"></span></div>
+            <div class="grand"><span>Amount charged</span><span data-testid="order-total"></span></div>
+        </div>
+
+        <button class="full-width secondary" data-testid="new-order"
+                onclick="window.location.href='inventory.html'">Start a new order</button>
+    </section>
+</main>
+
+<script src="assets/atlas.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        if (!Atlas.session.requireLogin()) {
+            return;
+        }
+        const order = JSON.parse(sessionStorage.getItem("atlas.order") || "{}");
+        document.querySelector("[data-testid='order-reference']").textContent = order.reference || "—";
+        document.querySelector("[data-testid='order-items']").textContent = order.items || 0;
+        document.querySelector("[data-testid='order-total']").textContent = Atlas.money(order.total || 0);
+    });
+</script>
+</body>
+</html>

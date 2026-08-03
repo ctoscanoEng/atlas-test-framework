@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Atlas Outdoor — Review order</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body>
+
+<header class="app-bar">
+    <div class="brand">ATLAS<span>·</span>OUTDOOR</div>
+    <nav>
+        <span data-testid="current-user" style="font-size:13px;color:#8b98a5"></span>
+        <a href="checkout-info.html" data-testid="back-to-details">Edit details</a>
+    </nav>
+</header>
+
+<main>
+    <div class="steps">
+        <span data-testid="step-1">1 · Your details</span>
+        <span>›</span><span class="active" data-testid="step-2">2 · Review</span>
+        <span>›</span><span data-testid="step-3">3 · Confirmation</span>
+    </div>
+
+    <h1>Review your order</h1>
+    <p class="subtitle">Nothing is charged until you place the order.</p>
+
+    <section class="card">
+        <h3 style="margin-top:0;font-size:15px">Delivery to</h3>
+        <p data-testid="delivery-summary" style="color:#8b98a5;font-size:14px"></p>
+
+        <h3 style="font-size:15px">Items</h3>
+        <table>
+            <thead>
+            <tr><th>Product</th><th>Quantity</th><th>Line total</th></tr>
+            </thead>
+            <tbody data-testid="review-lines"></tbody>
+        </table>
+
+        <div class="totals">
+            <div><span>Subtotal</span><span data-testid="subtotal"></span></div>
+            <div><span>Tax (8%)</span><span data-testid="tax"></span></div>
+            <div class="grand"><span>Total</span><span data-testid="grand-total"></span></div>
+        </div>
+
+        <button class="full-width" id="btn-place-order" data-volatile-id data-testid="place-order">
+            Place order
+        </button>
+    </section>
+</main>
+
+<script src="assets/atlas.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        if (!Atlas.session.requireLogin()) {
+            return;
+        }
+        const customer = JSON.parse(sessionStorage.getItem("atlas.customer") || "{}");
+        document.querySelector("[data-testid='delivery-summary']").textContent =
+            `${customer.firstName || ""} ${customer.lastName || ""} — ${customer.address || "no address"}, ` +
+            `${customer.city || ""} ${customer.postcode || ""} (${customer.email || ""})`;
+
+        document.querySelector("[data-testid='review-lines']").innerHTML = Atlas.cart.read().map(line => `
+            <tr data-testid="review-line" data-product-id="${line.id}">
+                <td data-testid="review-name">${line.name}</td>
+                <td data-testid="review-quantity">${line.quantity}</td>
+                <td data-testid="review-total">${Atlas.money(line.price * line.quantity)}</td>
+            </tr>`).join("");
+
+        document.querySelector("[data-testid='subtotal']").textContent = Atlas.money(Atlas.cart.subtotal());
+        document.querySelector("[data-testid='tax']").textContent = Atlas.money(Atlas.cart.tax());
+        document.querySelector("[data-testid='grand-total']").textContent = Atlas.money(Atlas.cart.total());
+
+        document.querySelector("[data-testid='place-order']").addEventListener("click", () => {
+            const order = {
+                reference: "ATL-" + new Date().getFullYear() + "-" + Math.floor(100000 + Math.random() * 899999),
+                total: Atlas.cart.total(),
+                items: Atlas.cart.count()
+            };
+            sessionStorage.setItem("atlas.order", JSON.stringify(order));
+            Atlas.cart.write([]);
+            window.location.href = "checkout-complete.html";
+        });
+    });
+</script>
+</body>
+</html>

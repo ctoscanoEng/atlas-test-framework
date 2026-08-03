@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Atlas Outdoor — Component playground</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body>
+
+<header class="app-bar">
+    <div class="brand">ATLAS<span>·</span>OUTDOOR</div>
+    <nav><a href="index.html" data-testid="nav-home">Sign in</a></nav>
+</header>
+
+<main>
+    <h1>Component playground</h1>
+    <p class="subtitle">
+        The parts of a web application that break naive automation: dialogs, frames,
+        shadow roots, deferred rendering, second windows and file inputs.
+    </p>
+
+    <section class="card" style="margin-bottom:18px">
+        <h3 style="margin-top:0;font-size:15px">Browser dialogs</h3>
+        <button data-testid="trigger-alert" class="secondary">Alert</button>
+        <button data-testid="trigger-confirm" class="secondary">Confirm</button>
+        <button data-testid="trigger-prompt" class="secondary">Prompt</button>
+        <p data-testid="dialog-result" style="color:#8b98a5;font-size:14px;margin-bottom:0">No dialog handled yet</p>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+        <h3 style="margin-top:0;font-size:15px">Nested browsing context</h3>
+        <iframe id="content-frame" data-testid="content-frame" src="frame-content.html"
+                style="width:100%;height:130px;border:1px solid #26303d;border-radius:8px"></iframe>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+        <h3 style="margin-top:0;font-size:15px">Web component (closed to XPath, reachable through the shadow root)</h3>
+        <atlas-counter data-testid="shadow-counter"></atlas-counter>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+        <h3 style="margin-top:0;font-size:15px">Deferred rendering</h3>
+        <button data-testid="start-job" class="secondary">Run a 2 second job</button>
+        <p data-testid="job-status" style="color:#8b98a5;font-size:14px">idle</p>
+        <div data-testid="job-result" style="display:none;color:#3fb950;font-size:14px">Job completed successfully</div>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+        <h3 style="margin-top:0;font-size:15px">Second window</h3>
+        <a href="frame-content.html" target="_blank" data-testid="open-new-tab">Open the release notes in a new tab</a>
+    </section>
+
+    <section class="card" style="margin-bottom:18px">
+        <h3 style="margin-top:0;font-size:15px">Sortable table</h3>
+        <table data-testid="orders-table">
+            <thead>
+            <tr>
+                <th data-testid="sort-by-reference" data-column="0">Reference</th>
+                <th data-testid="sort-by-customer" data-column="1">Customer</th>
+                <th data-testid="sort-by-amount" data-column="2">Amount</th>
+            </tr>
+            </thead>
+            <tbody data-testid="orders-body">
+            <tr><td>ATL-2024-000318</td><td>Beatrice Lombardi</td><td>412.50</td></tr>
+            <tr><td>ATL-2024-000119</td><td>Andrea Conti</td><td>98.00</td></tr>
+            <tr><td>ATL-2024-000902</td><td>Chiara Rossi</td><td>1204.90</td></tr>
+            <tr><td>ATL-2024-000577</td><td>Davide Moretti</td><td>64.90</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="card">
+        <h3 style="margin-top:0;font-size:15px">File input</h3>
+        <input type="file" data-testid="file-input" style="border:none;padding:0">
+        <p data-testid="file-name" style="color:#8b98a5;font-size:14px">no file selected</p>
+    </section>
+</main>
+
+<script src="assets/atlas.js"></script>
+<script>
+    const result = document.querySelector("[data-testid='dialog-result']");
+
+    document.querySelector("[data-testid='trigger-alert']").addEventListener("click", () => {
+        window.alert("Inventory synchronisation finished");
+        result.textContent = "alert acknowledged";
+    });
+
+    document.querySelector("[data-testid='trigger-confirm']").addEventListener("click", () => {
+        result.textContent = window.confirm("Delete the selected orders?") ? "confirmed" : "dismissed";
+    });
+
+    document.querySelector("[data-testid='trigger-prompt']").addEventListener("click", () => {
+        const answer = window.prompt("Reference of the order to reopen", "");
+        result.textContent = answer ? "reopening " + answer : "prompt dismissed";
+    });
+
+    document.querySelector("[data-testid='start-job']").addEventListener("click", () => {
+        const status = document.querySelector("[data-testid='job-status']");
+        status.textContent = "running…";
+        setTimeout(() => {
+            status.textContent = "done";
+            document.querySelector("[data-testid='job-result']").style.display = "block";
+        }, 2000);
+    });
+
+    document.querySelector("[data-testid='file-input']").addEventListener("change", event => {
+        const file = event.target.files[0];
+        document.querySelector("[data-testid='file-name']").textContent = file ? file.name : "no file selected";
+    });
+
+    // Sorting alternates ascending / descending on every click, numeric columns included.
+    let ascending = true;
+    document.querySelectorAll("[data-testid='orders-table'] th").forEach(header => {
+        header.addEventListener("click", () => {
+            const column = Number(header.dataset.column);
+            const body = document.querySelector("[data-testid='orders-body']");
+            const rows = Array.from(body.querySelectorAll("tr"));
+            rows.sort((a, b) => {
+                const left = a.cells[column].textContent.trim();
+                const right = b.cells[column].textContent.trim();
+                const numeric = !isNaN(parseFloat(left)) && !isNaN(parseFloat(right));
+                const comparison = numeric ? parseFloat(left) - parseFloat(right) : left.localeCompare(right);
+                return ascending ? comparison : -comparison;
+            });
+            ascending = !ascending;
+            rows.forEach(row => body.appendChild(row));
+        });
+    });
+
+    // A genuine custom element with an open shadow root: its internals are
+    // invisible to document.querySelector and to every XPath expression.
+    class AtlasCounter extends HTMLElement {
+        connectedCallback() {
+            const root = this.attachShadow({mode: "open"});
+            root.innerHTML = `
+                <style>
+                    .box { font-family: system-ui, sans-serif; color: #e6edf3; display: flex;
+                           gap: 12px; align-items: center; }
+                    button { background:#3fb950; border:none; border-radius:8px; padding:8px 14px;
+                             font-weight:600; cursor:pointer; }
+                    output { font-size: 18px; font-weight: 700; }
+                </style>
+                <div class="box">
+                    <button id="increment">Increment</button>
+                    <output id="value">0</output>
+                </div>`;
+            let value = 0;
+            root.getElementById("increment").addEventListener("click", () => {
+                root.getElementById("value").textContent = ++value;
+            });
+        }
+    }
+    customElements.define("atlas-counter", AtlasCounter);
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Atlas Outdoor — Sign in</title>
+    <link rel="stylesheet" href="assets/atlas.css">
+</head>
+<body>
+
+<header class="app-bar">
+    <div class="brand">ATLAS<span>·</span>OUTDOOR</div>
+    <nav><a href="widgets.html" data-testid="nav-widgets">Component playground</a></nav>
+</header>
+
+<main>
+    <section class="card login-card">
+        <h1>Sign in</h1>
+        <p class="subtitle">Store back office — authorised personnel only</p>
+
+        <form id="login-form" data-testid="login-form" autocomplete="off">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" data-testid="username" autocomplete="off">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" data-testid="password" autocomplete="off">
+
+            <!-- data-volatile-id: this id is rewritten at every page load, exactly
+                 like a component library regenerating ids on each build. -->
+            <button type="submit" id="btn-login" data-volatile-id data-testid="login-submit" class="full-width">
+                Sign in
+            </button>
+        </form>
+
+        <div class="error-banner" data-testid="error-message" style="display:none"></div>
+
+        <p class="hint">
+            Accounts seeded by the sandbox:<br>
+            <code>standard_user</code> — full access<br>
+            <code>readonly_user</code> — cannot complete a checkout<br>
+            <code>locked_user</code> — account locked<br>
+            password: <code>atlas_secret</code>
+        </p>
+    </section>
+</main>
+
+<script src="assets/atlas.js"></script>
+<script>
+    if (new URLSearchParams(window.location.search).get("reason") === "session-required") {
+        window.addEventListener("DOMContentLoaded", () =>
+            Atlas.showError("Your session has expired, please sign in again."));
+    }
+
+    document.getElementById("login-form").addEventListener("submit", async function (event) {
+        event.preventDefault();
+        Atlas.showError("");
+
+        const username = document.querySelector("[data-testid='username']").value.trim();
+        const password = document.querySelector("[data-testid='password']").value;
+
+        if (!username || !password) {
+            Atlas.showError("Username and password are both required.");
+            return;
+        }
+
+        const response = await fetch("/api/auth/login", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({username: username, password: password})
+        });
+        const payload = await response.json();
+
+        if (response.ok) {
+            Atlas.session.save(payload);
+            window.location.href = "inventory.html";
+        } else {
+            Atlas.showError(payload.error);
+        }
+    });
+</script>
+</body>
+</html>
