@@ -14,7 +14,8 @@ and — unusually — **its own application under test**, served in-process by t
 The whole suite runs **offline, deterministically, on any machine with a JDK and a browser**:
 
 ```bash
-git clone <this-repository> && cd atlas-test-framework
+git clone https://github.com/ctoscanoEng/atlas-test-framework.git
+cd atlas-test-framework
 ./mvnw test -Psmoke
 ```
 
@@ -267,7 +268,7 @@ mysteriously. Run `-Datlas.headless=false` or pick another browser.
 gives each test its own browser precisely to rule that out.
 
 **I want to see the application myself** — pin the port and open it:
-`./mvnw test -Psmoke -Datlas.sandbox.port=8420 -Pheaded`, then browse `http://127.0.0.1:8420`
+`./mvnw test -Psmoke,headed -Datlas.sandbox.port=8420`, then browse `http://127.0.0.1:8420`
 while the suite runs. Credentials are listed on the sign-in page.
 
 **Where are the results?** — `target/atlas-report/index.html` (report),

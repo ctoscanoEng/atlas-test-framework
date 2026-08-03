@@ -89,6 +89,12 @@ jobs:
           java-version: "21"
           distribution: temurin
           cache: maven
+      # Chrome ships with the runner image. Firefox does not, reliably: on some
+      # Ubuntu images it is the snap build, which geckodriver cannot drive.
+      # Installing it explicitly turns an occasional mystery into a fixed version.
+      - name: Install Firefox
+        if: matrix.browser == 'firefox'
+        uses: browser-actions/setup-firefox@v1
       - name: Run the regression suite
         run: ./mvnw -B test -Pregression -Datlas.browser=${{ matrix.browser }}
       - uses: actions/upload-artifact@v4
