@@ -31,84 +31,141 @@ that no description can undo.
 
 > The post that works is specific, quantified, and admits a trade-off. The one that does not work
 > is a list of buzzwords and a certificate image.
-
-### English
-
-> **I finished my Selenium automation certification — and instead of the course project, I built my own framework.**
 >
-> The course covered Java, Selenium WebDriver, TestNG, Cucumber, Grid, Docker and CI/CD. Rather than
-> hand in another suite of tests against a public demo site, I built **ATLAS**: a hybrid automation
-> framework that ships with its own application under test.
+> The angle below is the honest one: two years on a single stack build a comfort zone, and the joke
+> that opens the post (`Sleep 5s`) turns into a real technical claim three paragraphs later
+> (`Thread.sleep` appears nowhere in this repository). Humour that pays off in evidence is the only
+> kind worth putting on a professional profile.
 >
-> Three problems I wanted to solve properly:
->
-> **1 · Suites that break for reasons that are not defects.** Most portfolio projects target a public
-> demo site. The day it changes, everything goes red. ATLAS serves its own SPA + JSON API in-process
-> on an ephemeral port — the whole suite runs offline and deterministically, so a red build always
-> means a real problem.
->
-> **2 · Locators that rot.** The application deliberately regenerates element ids at every load, the
-> way a component library does on each deploy. Locators declare a primary strategy and ordered
-> fallbacks; the resolver polls all of them inside a single deadline (~10 ms overhead, not a 15-second
-> timeout), keeps the suite green, and writes every healed element to a maintenance backlog file.
-> Self-healing without that backlog is just a way to let page objects rot silently.
->
-> **3 · Retries that hide regressions.** Retrying every failure is how teams stop trusting their
-> suite. ATLAS retries only environmental failures — a failed assertion is a defect and stays red.
->
-> Also in the box: 36 tests running on 6 threads (~40 s), a REST layer with JSON-schema contract
-> validation, Gherkin scenarios sharing the exact same page objects, Selenium Grid + Docker Compose,
-> a GitHub Actions pipeline staged api → smoke → cross-browser regression, and a Jenkinsfile.
->
-> Everything is documented — including what I deliberately left out and why.
->
-> Repository: <link> · Certificate: <link>
->
-> Feedback from people who do this for a living is very welcome.
->
-> #TestAutomation #Selenium #Java #TestNG #Cucumber #QA #SDET #CICD
+> Practical notes: LinkedIn truncates after roughly two lines, so the opening joke must land
+> entirely above the "see more" fold. Put the repository link in the post rather than in the first
+> comment — less reach, more credibility. Attach one screenshot, and make it the HTML report or
+> `locator-backlog.md`, never the certificate: the certificate is the attachment, not the content.
 
 ### Italiano
 
-> **Ho completato la certificazione in Selenium automation — e invece del progetto del corso ho costruito un framework mio.**
+> **Dopo due anni di Robot Framework e Python, davanti a un test instabile il mio riflesso condizionato era diventato uno solo: `Sleep    5s`.**
 >
-> Il corso copriva Java, Selenium WebDriver, TestNG, Cucumber, Grid, Docker e CI/CD. Invece di
-> consegnare l'ennesima suite contro un sito demo pubblico, ho costruito **ATLAS**: un framework di
-> automazione ibrido che si porta dietro la propria applicazione sotto test.
+> Funzionava. Quasi sempre. Ed è esattamente il problema.
 >
-> Tre problemi che volevo risolvere sul serio:
+> Robot Framework è uno strumento serio e per certi contesti resta la scelta giusta — ma dopo due
+> anni sullo stesso stack mi ero costruito una comfort zone fatta di keyword già pronte e di
+> soluzioni che *sembravano* funzionare. Avevo bisogno di una rinfrescata bella forte, non di un
+> ripasso.
 >
-> **1 · Suite che diventano rosse per motivi che non sono difetti.** Quasi tutti i progetti da
-> portfolio puntano a un sito demo pubblico: il giorno che cambia, salta tutto. ATLAS serve la
-> propria SPA + API JSON in-process su porta effimera — la suite gira offline e in modo
-> deterministico, quindi una build rossa è sempre un problema vero.
+> Così ho fatto un corso completo su **Selenium 4 + Java**: Java e OOP, WebDriver, TestNG, Page
+> Object Model, Selenium Grid, Docker, design di framework, Cucumber BDD e CI/CD. Dodici moduli,
+> zero scorciatoie.
 >
-> **2 · Locator che marciscono.** L'applicazione rigenera di proposito gli id degli elementi a ogni
-> caricamento, come fa una component library a ogni deploy. Ogni locator dichiara una strategia
-> primaria e dei fallback ordinati; il resolver le interroga tutte dentro un'unica deadline (~10 ms
-> di costo, non un timeout da 15 secondi), tiene verde la suite e scrive ogni elemento "guarito" in
-> un file di backlog di manutenzione. Il self-healing senza quel backlog serve solo a far marcire i
-> page object in silenzio.
+> E invece di consegnare il solito progetto finale contro un sito demo pubblico, ne ho costruito uno
+> mio: **ATLAS — Automated Test Layer & Assurance Suite**.
 >
-> **3 · Retry che nascondono le regressioni.** Riprovare ogni fallimento è il modo migliore per non
-> fidarsi più della propria suite. ATLAS riprova solo i fallimenti ambientali: un'asserzione fallita
-> è un difetto e resta rossa.
+> **Tre problemi che volevo risolvere sul serio, non aggirare:**
 >
-> Nel pacchetto anche: 36 test su 6 thread (~40 s), un layer REST con validazione di contratto via
-> JSON schema, scenari Gherkin che riusano esattamente gli stessi page object, Selenium Grid +
-> Docker Compose, pipeline GitHub Actions a stadi api → smoke → regressione cross-browser, e un
-> Jenkinsfile.
+> **1 · Le suite che diventano rosse per motivi che non sono difetti.**
+> Quasi tutti i progetti da portfolio puntano a un sito demo pubblico: il giorno che quel sito
+> cambia, salta tutto. ATLAS **si porta dietro la propria applicazione sotto test** — una SPA + API
+> JSON servite in-process dall'HttpServer del JDK, su porta effimera. La suite gira offline, in
+> aereo, su un agent CI blindato. Se la build è rossa, il problema è mio.
 >
-> Tutto documentato — comprese le cose che ho deciso di non fare, e il perché.
+> **2 · I locator che marciscono.**
+> L'applicazione rigenera *di proposito* gli id degli elementi a ogni caricamento, come fa una
+> component library a ogni deploy. Ogni locator dichiara una strategia primaria e dei fallback
+> ordinati; il resolver le interroga tutte dentro un'unica deadline — ~10 ms di costo, non un
+> timeout da 15 secondi. La suite resta verde **e ogni elemento "guarito" finisce in un file di
+> backlog di manutenzione generato a fine run.** Il self-healing senza quel file serve solo a far
+> marcire i page object in silenzio.
 >
-> Repository: <link> · Certificato: <link>
+> **3 · I retry che nascondono le regressioni.**
+> Riprovare ogni fallimento è il modo più veloce per non fidarsi più della propria suite. ATLAS
+> riprova solo i fallimenti ambientali: un'asserzione fallita è un difetto e resta rossa.
 >
-> Ogni feedback da chi fa questo lavoro è benvenuto.
+> **E sì: `Thread.sleep` non compare in nessuna delle 5.000 righe del progetto.** Ogni attesa è una
+> condizione con una scadenza. Vecchie abitudini, sepolte come si deve.
 >
-> #TestAutomation #Selenium #Java #TestNG #Cucumber #QA #SDET #CICD
+> **I numeri:** 36 test su 6 thread in 37 secondi · 8 test di contratto REST con validazione JSON
+> Schema in ~1 secondo · 8 scenari Gherkin che riusano *esattamente* gli stessi page object ·
+> Selenium Grid + Docker Compose · pipeline GitHub Actions a stadi (api → smoke → regressione
+> cross-browser) e un Jenkinsfile.
+>
+> **Scelte tecniche che sono pronto a difendere:** niente PageFactory/@FindBy (i proxy risolvono su
+> una sola strategia e non sanno esprimere fallback) · sessione browser legata al thread via
+> ThreadLocal · implicit wait a zero di proposito · importi in BigDecimal, mai double · listener
+> registrati via META-INF/services, così "Run As → TestNG Test" in Eclipse si comporta identico alla
+> pipeline.
+>
+> Tutto documentato — **compreso quello che ho deciso di NON fare e perché**, e qual è oggi il punto
+> più debole del progetto.
+>
+> 🔗 Repository: <link> · 📜 Certificazione: <link>
+>
+> Ogni feedback da chi fa questo mestiere è più che benvenuto. Soprattutto quello scomodo.
+>
+> #TestAutomation #Selenium #Java #TestNG #Cucumber #QAEngineering #SDET #CICD
 
-**Posting notes:** put the repository link in the first comment if you want reach, in the post if you
-want credibility — pick credibility. Attach one screenshot: the HTML report, not the certificate.
+### English
+
+> **After two years of Robot Framework and Python, my conditioned reflex in front of a flaky test had become exactly one line: `Sleep    5s`.**
+>
+> It worked. Most of the time. Which is precisely the problem.
+>
+> Robot Framework is a serious tool and still the right call in the right context — but after two
+> years on the same stack I had built a comfort zone out of ready-made keywords and fixes that only
+> *looked* like fixes. I needed a hard reset, not a refresher.
+>
+> So I took a full **Selenium 4 + Java** course: Java and OOP, WebDriver, TestNG, Page Object Model,
+> Selenium Grid, Docker, framework design, Cucumber BDD and CI/CD. Twelve modules, no shortcuts.
+>
+> And instead of handing in the usual final project against a public demo site, I built my own:
+> **ATLAS — Automated Test Layer & Assurance Suite**.
+>
+> **Three problems I wanted to actually solve, not work around:**
+>
+> **1 · Suites that go red for reasons that aren't defects.** Most portfolio projects target a
+> public demo site; the day it changes, everything breaks. ATLAS **ships its own application under
+> test** — an SPA + JSON API served in-process by the JDK HTTP server on an ephemeral port. The
+> suite runs offline, on a plane, on a locked-down CI agent. A red build is always my problem.
+>
+> **2 · Locators that rot.** The app deliberately regenerates element ids on every load, the way a
+> component library does on every deploy. Each locator declares a primary strategy and ordered
+> fallbacks; the resolver polls all of them inside a single deadline — ~10 ms of overhead, not a
+> 15-second timeout. The suite stays green **and every healed element lands in a maintenance backlog
+> file generated at the end of the run.** Self-healing without that file is just a way to let page
+> objects rot silently.
+>
+> **3 · Retries that hide regressions.** Retrying every failure is the fastest way to stop trusting
+> your own suite. ATLAS retries environmental failures only: a failed assertion is a defect and
+> stays red.
+>
+> **And yes — `Thread.sleep` appears nowhere in the 5,000 lines of this project.** Every wait is a
+> condition with a deadline. Old habits, properly buried.
+>
+> **The numbers:** 36 tests on 6 threads in 37 seconds · 8 REST contract tests with JSON Schema
+> validation in ~1 second · 8 Gherkin scenarios reusing *exactly* the same page objects · Selenium
+> Grid + Docker Compose · a staged GitHub Actions pipeline (api → smoke → cross-browser regression)
+> and a Jenkinsfile.
+>
+> **Technical decisions I'm ready to defend:** no PageFactory/@FindBy (proxies resolve against a
+> single strategy and can't express fallbacks) · browser session bound to the thread via
+> ThreadLocal · implicit waits set to zero on purpose · money in BigDecimal, never double ·
+> listeners registered through META-INF/services, so "Run As → TestNG Test" in Eclipse behaves
+> identically to the pipeline.
+>
+> All documented — **including what I deliberately left out and why**, and what the weakest part of
+> the project is today.
+>
+> 🔗 Repository: <link> · 📜 Certificate: <link>
+>
+> Feedback from people who do this for a living is very welcome. Especially the uncomfortable kind.
+>
+> #TestAutomation #Selenium #Java #TestNG #Cucumber #QAEngineering #SDET #CICD
+
+### Short variant — when sharing the certificate on its own
+
+> Dopo due anni di Robot Framework, la mia soluzione universale ai test instabili era `Sleep 5s`.
+> Ho appena finito una certificazione in Selenium 4 + Java e ho costruito un framework in cui
+> `Thread.sleep` non compare nemmeno una volta.
+> 36 test, 6 thread, 37 secondi, applicazione sotto test inclusa nel repository. 👇 <link>
 
 ---
 
