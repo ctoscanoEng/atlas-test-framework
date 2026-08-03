@@ -121,8 +121,11 @@ jobs:
 
   publish-report:
     name: Publish the report
-    needs: [regression, behaviour]
-    if: always() && github.ref == 'refs/heads/main'
+    needs: [regression]
+    # Only when a regression run actually produced a report on main. Using
+    # always() here would make the job run — and fail — on a plain push, where
+    # the regression stage is skipped and there is no artefact to download.
+    if: always() && needs.regression.result == 'success' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write

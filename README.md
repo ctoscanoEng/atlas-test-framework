@@ -1,5 +1,12 @@
 # ATLAS — Automated Test Layer & Assurance Suite
 
+[![CI](https://github.com/ctoscanoEng/atlas-test-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/ctoscanoEng/atlas-test-framework/actions/workflows/ci.yml)
+[![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://adoptium.net/)
+[![Selenium](https://img.shields.io/badge/Selenium-4.33-brightgreen)](https://www.selenium.dev/)
+[![TestNG](https://img.shields.io/badge/TestNG-7.11-blue)](https://testng.org/)
+[![Cucumber](https://img.shields.io/badge/Cucumber-7.22-green)](https://cucumber.io/)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+
 A hybrid test automation framework built on **Java 17 · Selenium 4 · TestNG · Cucumber**, with a
 **self-healing locator engine**, thread-safe parallel execution, Selenium Grid / Docker support
 and — unusually — **its own application under test**, served in-process by the framework.
@@ -225,6 +232,48 @@ Requirements: JDK 17 or newer and one of Chrome / Firefox / Edge. Drivers are re
 by Selenium Manager.
 
 ---
+
+## Requirements
+
+| | Needed | Notes |
+|---|---|---|
+| **JDK** | 17 or newer | The project compiles to release 17 for portability; it builds and runs on 21 and 26 as well. `java -version` must resolve to a JDK, not a JRE. |
+| **Maven** | not required | `./mvnw` downloads and caches Apache Maven 3.9.9 on first run (`mvnw.cmd` on Windows). |
+| **Browser** | one of Chrome, Firefox, Edge | Only for the UI suites. `-Papi` needs no browser at all. |
+| **Driver binaries** | not required | Resolved automatically by Selenium Manager, bundled with Selenium 4. |
+| **Docker** | optional | Only for the Grid and containerised pipeline topologies. |
+| **Network** | optional after the first build | Once dependencies are cached, the sandbox suites run entirely offline. |
+
+## Troubleshooting
+
+**`./mvnw: Permission denied`** — the executable bit was lost (common when the project travels
+through a zip file): `chmod +x mvnw`.
+
+**`Unable to obtain a chrome session from the Grid at …`** — the Grid is not running:
+`docker compose -f docker/docker-compose.grid.yml up -d`, then check `http://localhost:4444/ui`.
+Drop `-Pgrid` to fall back to local browsers.
+
+**The browsers on the Grid cannot reach the application under test** — they run in their own
+containers, so the sandbox must listen on every interface and advertise a hostname those containers
+can resolve:
+`ATLAS_SANDBOX_BIND_ADDRESS=0.0.0.0 ATLAS_SANDBOX_ADVERTISED_HOST=<your-host>`.
+`docker/docker-compose.ci.yml` already does this.
+
+**`Safari does not support headless execution`** — that is the framework refusing to fail
+mysteriously. Run `-Datlas.headless=false` or pick another browser.
+
+**A test fails only in parallel** — start by running it alone with `-Datlas.threads=1
+-Datlas.headless=false` and watch it. Shared state between tests is the usual cause; this framework
+gives each test its own browser precisely to rule that out.
+
+**I want to see the application myself** — pin the port and open it:
+`./mvnw test -Psmoke -Datlas.sandbox.port=8420 -Pheaded`, then browse `http://127.0.0.1:8420`
+while the suite runs. Credentials are listed on the sign-in page.
+
+**Where are the results?** — `target/atlas-report/index.html` (report),
+`target/atlas-report/locator-backlog.md` (locators that survived on a fallback),
+`target/atlas-report/screenshots/` and `page-source/` (failure evidence),
+`target/atlas-report/logs/atlas.log` (full DEBUG trace, one line per action, tagged with the test name).
 
 ## Documentation
 

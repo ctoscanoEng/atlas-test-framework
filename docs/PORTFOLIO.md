@@ -8,7 +8,7 @@ them together, in that order of emphasis.
 
 ## 1. Repository checklist
 
-- [ ] Repository name: `atlas-test-framework`
+- [x] Repository name: `atlas-test-framework` — https://github.com/ctoscanoEng/atlas-test-framework
 - [ ] Description (the one line under the title):
       *Hybrid Selenium 4 · Java 17 · TestNG · Cucumber framework with self-healing locators, parallel
       execution, Grid/Docker support and its own application under test — runs offline, one command.*
@@ -97,7 +97,7 @@ that no description can undo.
 > Tutto documentato — **compreso quello che ho deciso di NON fare e perché**, e qual è oggi il punto
 > più debole del progetto.
 >
-> 🔗 Repository: <link> · 📜 Certificazione: <link>
+> 🔗 Repository: github.com/ctoscanoEng/atlas-test-framework · 📜 Certificazione: <link>
 >
 > Ogni feedback da chi fa questo mestiere è più che benvenuto. Soprattutto quello scomodo.
 >
@@ -154,7 +154,7 @@ that no description can undo.
 > All documented — **including what I deliberately left out and why**, and what the weakest part of
 > the project is today.
 >
-> 🔗 Repository: <link> · 📜 Certificate: <link>
+> 🔗 Repository: github.com/ctoscanoEng/atlas-test-framework · 📜 Certificate: <link>
 >
 > Feedback from people who do this for a living is very welcome. Especially the uncomfortable kind.
 >
@@ -165,7 +165,8 @@ that no description can undo.
 > Dopo due anni di Robot Framework, la mia soluzione universale ai test instabili era `Sleep 5s`.
 > Ho appena finito una certificazione in Selenium 4 + Java e ho costruito un framework in cui
 > `Thread.sleep` non compare nemmeno una volta.
-> 36 test, 6 thread, 37 secondi, applicazione sotto test inclusa nel repository. 👇 <link>
+> 36 test, 6 thread, 37 secondi, applicazione sotto test inclusa nel repository.
+> 👇 github.com/ctoscanoEng/atlas-test-framework
 
 ---
 
