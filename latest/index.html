@@ -1,0 +1,5206 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>ATLAS â Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">ATLAS â Automation Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">2026-08-03 22:45:12</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="warning" href="#"><span>Warning</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">QAAutomation</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">authorisation</a><a class="dropdown-item" href="#">api</a><a class="dropdown-item" href="#">catalogue</a><a class="dropdown-item" href="#">authentication</a><a class="dropdown-item" href="#">widgets</a><a class="dropdown-item" href="#">regression</a><a class="dropdown-item" href="#">smoke</a><a class="dropdown-item" href="#">framework</a><a class="dropdown-item" href="#">checkout</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="warning" test-id="2"
+          author="QAAutomation"
+          tag="catalogue regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">sortingByPriceIsApplied</p>
+            <p class="text-sm">
+              <span>10:45:26 PM</span> / <span>00:00:02:609</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">sortingByPriceIsApplied</h5>
+<span class='badge badge-success'>08.03.2026 10:45:26 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:29 PM</span>
+<span class='badge badge-default'>00:00:02:609</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">catalogue</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Sorting by price descending really orders the rendered prices</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Sorting the catalogue by 'Price (high → low)'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          select 'Price (high → low)' on 'Catalogue: sort order'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Test passed in 2613 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="1"
+          author="QAAutomation"
+          tag="catalogue regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">filteringByCategoryNarrowsTheGrid</p>
+            <p class="text-sm">
+              <span>10:45:26 PM</span> / <span>00:00:02:580</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">filteringByCategoryNarrowsTheGrid</h5>
+<span class='badge badge-success'>08.03.2026 10:45:26 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:29 PM</span>
+<span class='badge badge-default'>00:00:02:580</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">catalogue</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Filtering by category narrows the grid to that category only</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Filtering the catalogue by 'Equipment'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          select 'Equipment' on 'Catalogue: category filter'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Test passed in 2586 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="3"
+          author="QAAutomation"
+          tag="catalogue smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">catalogueFinishesLoading</p>
+            <p class="text-sm">
+              <span>10:45:26 PM</span> / <span>00:00:07:737</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">catalogueFinishesLoading</h5>
+<span class='badge badge-success'>08.03.2026 10:45:26 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:34 PM</span>
+<span class='badge badge-default'>00:00:07:737</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">catalogue</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">The catalogue finishes loading and renders the whole product set</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          read text on 'Catalogue: result count'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          Test passed in 7740 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="4"
+          author="QAAutomation"
+          tag="catalogue regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">outOfStockProductCannotBeAdded</p>
+            <p class="text-sm">
+              <span>10:45:26 PM</span> / <span>00:00:02:536</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">outOfStockProductCannotBeAdded</h5>
+<span class='badge badge-success'>08.03.2026 10:45:26 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:29 PM</span>
+<span class='badge badge-default'>00:00:02:536</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">catalogue</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A product with no stock cannot be added to the cart</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          read text on 'Catalogue: stock label of 'Granite Trekking Poles''
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          read enabled state on 'Catalogue: add 'Granite Trekking Poles' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Test passed in 2542 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="5"
+          author="QAAutomation"
+          tag="catalogue smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">addingProductsUpdatesTheCart</p>
+            <p class="text-sm">
+              <span>10:45:26 PM</span> / <span>00:00:05:893</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">addingProductsUpdatesTheCart</h5>
+<span class='badge badge-success'>08.03.2026 10:45:26 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:32 PM</span>
+<span class='badge badge-default'>00:00:05:893</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">catalogue</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">Adding products updates the cart badge and the cart itself</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Catalogue: add 'Summit Down Jacket' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Catalogue: add 'Basecamp Headlamp 600' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          click on 'Catalogue: add 'Summit Down Jacket' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          click on 'Header: cart link'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Page 'Cart Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Cart: quantity of 'Summit Down Jacket''
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Test passed in 5901 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="6"
+          author="QAAutomation"
+          tag="checkout smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">customerCompletesAPurchase</p>
+            <p class="text-sm">
+              <span>10:45:26 PM</span> / <span>00:00:07:368</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">customerCompletesAPurchase</h5>
+<span class='badge badge-success'>08.03.2026 10:45:26 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:34 PM</span>
+<span class='badge badge-default'>00:00:07:368</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">checkout</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">A customer buys two products and is charged the amount shown in the cart</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:27 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:28 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:29 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Catalogue: add 'Summit Down Jacket' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Catalogue: add 'Basecamp Headlamp 600' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Header: cart link'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Page 'Cart Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Cart: subtotal'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Cart: tax'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          read text on 'Cart: grand total'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          click on 'Cart: proceed to checkout'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Page 'Checkout Details Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Filling the delivery details for Sibyl Russel
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          type 'Sibyl' on 'Checkout details: first name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          type 'Russel' on 'Checkout details: last name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          type 'mirtha.krajcik.5530@atlas.test' on 'Checkout details: email'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          type '70438 Gregory Streets' on 'Checkout details: address'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          type 'Port Frances' on 'Checkout details: city'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          type 'H2 9LA' on 'Checkout details: postcode'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          click on 'Checkout details: continue'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          Page 'Checkout Review Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          read text on 'Checkout review: delivery summary'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          read text on 'Checkout review: grand total'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          read text on 'Cart: grand total'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          read text on 'Checkout review: grand total'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          read text on 'Checkout review: grand total'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          Placing the order for € 339.01
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          click on 'Checkout review: place order'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          Page 'Order Confirmation Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          read text on 'Confirmation: title'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          read text on 'Confirmation: order reference'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          read text on 'Confirmation: item count'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          read text on 'Confirmation: amount charged'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          [HEALED] Checkout review: place order — primary strategy failed (By.id: btn-place-order), recovered with fallback #1 (By.cssSelector: [data-testid='place-order'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          Test passed in 7374 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="7"
+          author="QAAutomation"
+          tag="checkout regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">emptyingTheCartDisablesTheCheckout</p>
+            <p class="text-sm">
+              <span>10:45:30 PM</span> / <span>00:00:20:212</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">emptyingTheCartDisablesTheCheckout</h5>
+<span class='badge badge-success'>08.03.2026 10:45:30 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:50 PM</span>
+<span class='badge badge-default'>00:00:20:212</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">checkout</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Removing the last line empties the cart and disables the checkout</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:30 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:30 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          click on 'Catalogue: add 'Vertex Climbing Harness' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          click on 'Header: cart link'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Page 'Cart Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Removing 'Vertex Climbing Harness' from the cart
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          click on 'Cart: remove 'Vertex Climbing Harness''
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:50 PM</td>
+        <td>
+          read enabled state on 'Cart: proceed to checkout'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:50 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:50 PM</td>
+        <td>
+          [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:50 PM</td>
+        <td>
+          Test passed in 20212 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="8"
+          author="QAAutomation"
+          tag="checkout regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">malformedEmailIsRejected</p>
+            <p class="text-sm">
+              <span>10:45:30 PM</span> / <span>00:00:06:093</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">malformedEmailIsRejected</h5>
+<span class='badge badge-success'>08.03.2026 10:45:30 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:36 PM</span>
+<span class='badge badge-default'>00:00:06:093</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">checkout</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A malformed email address is rejected with the offending value quoted</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:30 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:30 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          click on 'Catalogue: add 'Nomad Merino Base Layer' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          click on 'Header: cart link'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:34 PM</td>
+        <td>
+          Page 'Cart Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          click on 'Cart: proceed to checkout'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Page 'Checkout Details Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Filling the delivery details for Sibyl Russel
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          type 'Sibyl' on 'Checkout details: first name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          type 'Russel' on 'Checkout details: last name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          type 'giulia.rossi.atlas.test' on 'Checkout details: email'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type '70438 Gregory Streets' on 'Checkout details: address'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type 'Port Frances' on 'Checkout details: city'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type 'H2 9LA' on 'Checkout details: postcode'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          click on 'Checkout details: continue'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          read text on 'Checkout details: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          Test passed in 6093 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="9"
+          author="QAAutomation"
+          tag="checkout regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">mandatoryFieldsAreEnforced</p>
+            <p class="text-sm">
+              <span>10:45:30 PM</span> / <span>00:00:05:813</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">mandatoryFieldsAreEnforced</h5>
+<span class='badge badge-success'>08.03.2026 10:45:30 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:36 PM</span>
+<span class='badge badge-default'>00:00:05:813</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">checkout</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">The checkout form lists every mandatory field left empty</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:30 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:30 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:31 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:32 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          click on 'Catalogue: add 'Nomad Merino Base Layer' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          click on 'Header: cart link'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Page 'Cart Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          click on 'Cart: proceed to checkout'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Page 'Checkout Details Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          type 'Giulia' on 'Checkout details: first name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type '' on 'Checkout details: last name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type '' on 'Checkout details: email'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type '' on 'Checkout details: postcode'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          click on 'Checkout details: continue'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          read text on 'Checkout details: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          Test passed in 5812 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="10"
+          author="QAAutomation"
+          tag="checkout regression authorisation"
+          device="">
+          <div class="test-detail">
+            <p class="name">readOnlyAccountCannotPlaceAnOrder</p>
+            <p class="text-sm">
+              <span>10:45:33 PM</span> / <span>00:00:06:319</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">readOnlyAccountCannotPlaceAnOrder</h5>
+<span class='badge badge-success'>08.03.2026 10:45:33 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:39 PM</span>
+<span class='badge badge-default'>00:00:06:319</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">checkout</span>
+<span class="badge badge-pill badge-default">regression</span>
+<span class="badge badge-pill badge-default">authorisation</span></div>
+<div class="m-t-10 m-l-5">A read-only account can fill a cart but cannot place an order</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          Signing in as 'readonly_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          type 'readonly_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:33 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:37 PM</td>
+        <td>
+          click on 'Catalogue: add 'Ridge GPS Watch' to cart'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:37 PM</td>
+        <td>
+          read text on 'Header: cart badge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:38 PM</td>
+        <td>
+          click on 'Header: cart link'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:38 PM</td>
+        <td>
+          Page 'Cart Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          click on 'Cart: proceed to checkout'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          read text on 'Cart: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Test passed in 6319 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author="QAAutomation"
+          tag="framework regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">aLocatorWithoutFallbacksFailsWithAReadableMessage</p>
+            <p class="text-sm">
+              <span>10:45:34 PM</span> / <span>00:00:02:417</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">aLocatorWithoutFallbacksFailsWithAReadableMessage</h5>
+<span class='badge badge-success'>08.03.2026 10:45:34 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:37 PM</span>
+<span class='badge badge-default'>00:00:02:417</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">framework</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Without fallbacks the same lookup fails, and the error names the element</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:37 PM</td>
+        <td>
+          Test passed in 2411 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="12"
+          author="QAAutomation"
+          tag="framework smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">brokenPrimaryStrategyIsHealedAndAudited</p>
+            <p class="text-sm">
+              <span>10:45:35 PM</span> / <span>00:00:02:121</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">brokenPrimaryStrategyIsHealedAndAudited</h5>
+<span class='badge badge-success'>08.03.2026 10:45:35 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:37 PM</span>
+<span class='badge badge-default'>00:00:02:121</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">framework</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">A locator whose primary strategy is dead is healed by its fallback and recorded</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:35 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:36 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:37 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:37 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:37 PM</td>
+        <td>
+          Test passed in 2110 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author="QAAutomation"
+          tag="framework smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">theApplicationReallyRegeneratesIds</p>
+            <p class="text-sm">
+              <span>10:45:37 PM</span> / <span>00:00:02:032</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">theApplicationReallyRegeneratesIds</h5>
+<span class='badge badge-success'>08.03.2026 10:45:37 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:39 PM</span>
+<span class='badge badge-default'>00:00:02:032</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">framework</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">The application regenerates element ids at every load — the premise of the feature</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:38 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Test passed in 2032 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="14"
+          author="QAAutomation"
+          tag="authentication regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">rejectedSignIn [locked account is refused before the pas…]</p>
+            <p class="text-sm">
+              <span>10:45:38 PM</span> / <span>00:00:02:962</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">rejectedSignIn [locked account is refused before the pas…]</h5>
+<span class='badge badge-success'>08.03.2026 10:45:38 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:41 PM</span>
+<span class='badge badge-default'>00:00:02:962</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Every rejected sign-in shows the user an actionable message</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type 'locked_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          read text on 'Login: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          Test passed in 2975 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="15"
+          author="QAAutomation"
+          tag="authentication regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">rejectedSignIn [unknown account]</p>
+            <p class="text-sm">
+              <span>10:45:38 PM</span> / <span>00:00:02:191</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">rejectedSignIn [unknown account]</h5>
+<span class='badge badge-success'>08.03.2026 10:45:38 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:40 PM</span>
+<span class='badge badge-default'>00:00:02:191</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Every rejected sign-in shows the user an actionable message</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          type 'ghost_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          read text on 'Login: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          Test passed in 2191 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="16"
+          author="QAAutomation"
+          tag="authentication regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">rejectedSignIn [username left empty]</p>
+            <p class="text-sm">
+              <span>10:45:38 PM</span> / <span>00:00:02:548</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">rejectedSignIn [username left empty]</h5>
+<span class='badge badge-success'>08.03.2026 10:45:38 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:41 PM</span>
+<span class='badge badge-default'>00:00:02:548</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Every rejected sign-in shows the user an actionable message</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          type '' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          read text on 'Login: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          Test passed in 2545 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="17"
+          author="QAAutomation"
+          tag="authentication regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">rejectedSignIn [password left empty]</p>
+            <p class="text-sm">
+              <span>10:45:38 PM</span> / <span>00:00:01:953</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">rejectedSignIn [password left empty]</h5>
+<span class='badge badge-success'>08.03.2026 10:45:38 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:40 PM</span>
+<span class='badge badge-default'>00:00:01:953</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Every rejected sign-in shows the user an actionable message</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          read text on 'Login: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          Test passed in 1943 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="18"
+          author="QAAutomation"
+          tag="authentication regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">rejectedSignIn [wrong password on a valid account]</p>
+            <p class="text-sm">
+              <span>10:45:38 PM</span> / <span>00:00:02:638</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">rejectedSignIn [wrong password on a valid account]</h5>
+<span class='badge badge-success'>08.03.2026 10:45:38 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:41 PM</span>
+<span class='badge badge-default'>00:00:02:638</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Every rejected sign-in shows the user an actionable message</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          read text on 'Login: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          Test passed in 2638 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="19"
+          author="QAAutomation"
+          tag="authentication regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">rejectedSignIn [credentials are case sensitive]</p>
+            <p class="text-sm">
+              <span>10:45:38 PM</span> / <span>00:00:02:680</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">rejectedSignIn [credentials are case sensitive]</h5>
+<span class='badge badge-success'>08.03.2026 10:45:38 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:41 PM</span>
+<span class='badge badge-default'>00:00:02:680</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Every rejected sign-in shows the user an actionable message</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:39 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type 'STANDARD_USER' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          read text on 'Login: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          Test passed in 2686 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="20"
+          author="QAAutomation"
+          tag="authentication regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">signedOutUserCannotReachTheCatalogue</p>
+            <p class="text-sm">
+              <span>10:45:39 PM</span> / <span>00:00:03:187</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">signedOutUserCannotReachTheCatalogue</h5>
+<span class='badge badge-success'>08.03.2026 10:45:39 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:42 PM</span>
+<span class='badge badge-default'>00:00:03:187</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Signing out clears the session and protects the internal pages</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Login: error banner'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          Test passed in 3186 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="21"
+          author="QAAutomation"
+          tag="authentication smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">standardUserSignsIn</p>
+            <p class="text-sm">
+              <span>10:45:39 PM</span> / <span>00:00:02:511</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">standardUserSignsIn</h5>
+<span class='badge badge-success'>08.03.2026 10:45:39 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:42 PM</span>
+<span class='badge badge-default'>00:00:02:511</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">authentication</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">A valid account reaches the catalogue and is named in the header</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          Page 'Login Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          Signing in as 'standard_user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type 'standard_user' on 'Login: username field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:40 PM</td>
+        <td>
+          type '********' on 'Login: password field'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          click on 'Login: sign in button'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          Page 'Inventory Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Header: signed in user'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          Test passed in 2510 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author="QAAutomation"
+          tag="widgets regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">deferredRenderingIsAwaited</p>
+            <p class="text-sm">
+              <span>10:45:41 PM</span> / <span>00:00:02:921</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">deferredRenderingIsAwaited</h5>
+<span class='badge badge-success'>08.03.2026 10:45:41 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:44 PM</span>
+<span class='badge badge-default'>00:00:02:921</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">widgets</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A two second background job is awaited by condition, never by sleeping</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          Page 'Playground Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          click on 'Playground: start job'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          read text on 'Playground: job status'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          read text on 'Playground: job result'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          Test passed in 2924 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="23"
+          author="QAAutomation"
+          tag="widgets regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">fileIsUploaded</p>
+            <p class="text-sm">
+              <span>10:45:41 PM</span> / <span>00:00:00:594</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">fileIsUploaded</h5>
+<span class='badge badge-success'>08.03.2026 10:45:41 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:42 PM</span>
+<span class='badge badge-default'>00:00:00:594</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">widgets</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A file is uploaded by writing its path into the input, with no OS dialog</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:41 PM</td>
+        <td>
+          Page 'Playground Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Playground: selected file name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          read text on 'Playground: selected file name'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:42 PM</td>
+        <td>
+          Test passed in 594 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="24"
+          author="QAAutomation"
+          tag="widgets regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">iframeContentIsReachable</p>
+            <p class="text-sm">
+              <span>10:45:42 PM</span> / <span>00:00:01:066</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">iframeContentIsReachable</h5>
+<span class='badge badge-success'>08.03.2026 10:45:42 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:43 PM</span>
+<span class='badge badge-default'>00:00:01:066</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">widgets</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">The driver enters an iframe, acts inside it and returns to the main document</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          Page 'Playground Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          click on 'Frame: acknowledge'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          read text on 'Frame: body text'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          read text on 'Playground: dialog outcome'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          Test passed in 1069 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="25"
+          author="QAAutomation"
+          tag="widgets regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">secondWindowIsReadAndClosed</p>
+            <p class="text-sm">
+              <span>10:45:43 PM</span> / <span>00:00:00:962</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">secondWindowIsReadAndClosed</h5>
+<span class='badge badge-success'>08.03.2026 10:45:43 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:44 PM</span>
+<span class='badge badge-default'>00:00:00:962</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">widgets</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A second tab is read and closed, leaving the driver on the original window</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:43 PM</td>
+        <td>
+          Page 'Playground Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          click on 'Playground: open a second tab'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          read text on 'Second tab: heading'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          Test passed in 961 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author="QAAutomation"
+          tag="widgets regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">nativeDialogsAreHandled</p>
+            <p class="text-sm">
+              <span>10:45:43 PM</span> / <span>00:00:01:460</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">nativeDialogsAreHandled</h5>
+<span class='badge badge-success'>08.03.2026 10:45:43 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:45 PM</span>
+<span class='badge badge-default'>00:00:01:460</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">widgets</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Native alert, confirm and prompt dialogs are driven and their outcome asserted</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          Page 'Playground Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          click on 'Playground: alert trigger'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          Accepted browser dialog: "Inventory synchronisation finished"
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          read text on 'Playground: dialog outcome'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          click on 'Playground: confirm trigger'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          read text on 'Playground: dialog outcome'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:45 PM</td>
+        <td>
+          click on 'Playground: prompt trigger'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:45 PM</td>
+        <td>
+          read text on 'Playground: dialog outcome'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:45 PM</td>
+        <td>
+          Test passed in 1462 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author="QAAutomation"
+          tag="widgets regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">shadowDomComponentIsDriven</p>
+            <p class="text-sm">
+              <span>10:45:44 PM</span> / <span>00:00:00:987</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">shadowDomComponentIsDriven</h5>
+<span class='badge badge-success'>08.03.2026 10:45:44 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:45 PM</span>
+<span class='badge badge-default'>00:00:00:987</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">widgets</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A web component is driven through its shadow root, where XPath cannot reach</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:44 PM</td>
+        <td>
+          Page 'Playground Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:45 PM</td>
+        <td>
+          Test passed in 986 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="28"
+          author="QAAutomation"
+          tag="widgets regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">tableSortsNumerically</p>
+            <p class="text-sm">
+              <span>10:45:44 PM</span> / <span>00:00:00:589</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">tableSortsNumerically</h5>
+<span class='badge badge-success'>08.03.2026 10:45:44 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:45 PM</span>
+<span class='badge badge-default'>00:00:00:589</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">widgets</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Sorting a table by a numeric column orders it numerically, not alphabetically</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:45 PM</td>
+        <td>
+          Page 'Playground Page' is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:45 PM</td>
+        <td>
+          click on 'Playground: amount column header'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:45 PM</td>
+        <td>
+          Test passed in 589 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="29"
+          author="QAAutomation"
+          tag="api smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">catalogueHonoursItsSchema</p>
+            <p class="text-sm">
+              <span>10:45:51 PM</span> / <span>00:00:01:200</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">catalogueHonoursItsSchema</h5>
+<span class='badge badge-success'>08.03.2026 10:45:51 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:01:200</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">The catalogue payload honours its JSON schema, field by field</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:51 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products → 200 (208 ms)
+request : <empty>
+response: {
+  "products": [
+    {
+      "id": "ATL-001",
+      "name": "Atlas Trail Backpack 35L",
+      "category": "backpacks",
+      "price": 129.90,
+      "stock": 14,
+      "rating": 4.6,
+      "description": "Weatherproof 35 litre pack with a suspended mesh back panel."
+    },
+    {
+      "id": "ATL-002",
+      "name": "Summit Down Jacket",
+      "category": "clothing",
+      "price": 249.00,
+      "stock": 6,
+      "rating": 4.8,
+      "description": "800 fill power down, 320 g, packs into its own chest pocket."
+    },
+    {
+      "id": "ATL-003",
+      "name": "Nomad Merino Base Layer",
+      "category": "clothing",
+      "price": 79.50,
+      "stock": 27,
+      "rating": 4.3,
+      "description": "180 gsm merino wool long sleeve, flatlock seams."
+    },
+    {
+      "id": "ATL-004",
+      "name": "Ridge GPS Watch",
+      "category": "electronics",
+      "price": 419.00,
+      "stock": 3,
+      "rating": 4.7,
+      "description": "Dual frequency GNSS, 40 hour battery in full accuracy mode."
+    },
+    {
+      "id": "ATL-005",
+      "name": "Basecamp Headlamp 600",
+      "category": "electronics",
+      "price": 64.90,
+      "stock": 41,
+      "rating": 4.1,
+      "description": "600 lumen rechargeable headlamp with a reactive light sensor."
+    },
+    {
+      "id": "ATL-006",
+      "name": "Granite Trekking Poles",
+      "category": "equipment",
+      "price": 98.00,
+      "stock": 0,
+      "rating": 4.4,
+      "description": "Carbon Z-fold poles, 420 g the pair, cork grips."
+    },
+    {
+      "id": "ATL-007",
+      "name": "Vertex Climbing Harness",
+      "category": "equipment",
+      "price": 89.90,
+      "stock": 11,
+      "rating": 4.5,
+      "description": "Four gear loops, EN 12277 type C certified."
+    },
+    {
+      "id": "ATL-008",
+      "name": "Drylite Sleeping Bag -5°C",
+      "category": "equipment",
+      "price": 199.00,
+      "stock": 8,
+      "rating": 4.2,
+      "description": "Hydrophobic down, comfort rating -5 °C, 1.1 kg."
+    }
+  ],
+  "currency …[truncated]</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 1199 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="30"
+          author="QAAutomation"
+          tag="api smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">healthEndpointIsUp</p>
+            <p class="text-sm">
+              <span>10:45:51 PM</span> / <span>00:00:01:175</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">healthEndpointIsUp</h5>
+<span class='badge badge-success'>08.03.2026 10:45:51 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:01:175</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">The service reports itself as healthy</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:51 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/health → 200 (209 ms)
+request : <empty>
+response: {"status":"UP","component":"atlas-sandbox"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 1174 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="31"
+          author="QAAutomation"
+          tag="api regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">lockedAccountIsRefusedWithADedicatedStatus</p>
+            <p class="text-sm">
+              <span>10:45:51 PM</span> / <span>00:00:01:172</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">lockedAccountIsRefusedWithADedicatedStatus</h5>
+<span class='badge badge-success'>08.03.2026 10:45:51 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:01:172</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A locked account is refused with its own status code</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:51 PM</td>
+        <td>
+          <pre>POST http://127.0.0.1:42159/api/auth/login → 423 (210 ms)
+request : {"password":"********","username":"locked_user"}
+response: {"error":"Account is locked, contact your administrator"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 1173 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author="QAAutomation"
+          tag="api regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">everyProductIsRetrievableById</p>
+            <p class="text-sm">
+              <span>10:45:51 PM</span> / <span>00:00:01:347</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">everyProductIsRetrievableById</h5>
+<span class='badge badge-success'>08.03.2026 10:45:51 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:01:347</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">Every product exposed by the list is retrievable on its own</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:51 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products → 200 (206 ms)
+request : <empty>
+response: {
+  "products": [
+    {
+      "id": "ATL-001",
+      "name": "Atlas Trail Backpack 35L",
+      "category": "backpacks",
+      "price": 129.90,
+      "stock": 14,
+      "rating": 4.6,
+      "description": "Weatherproof 35 litre pack with a suspended mesh back panel."
+    },
+    {
+      "id": "ATL-002",
+      "name": "Summit Down Jacket",
+      "category": "clothing",
+      "price": 249.00,
+      "stock": 6,
+      "rating": 4.8,
+      "description": "800 fill power down, 320 g, packs into its own chest pocket."
+    },
+    {
+      "id": "ATL-003",
+      "name": "Nomad Merino Base Layer",
+      "category": "clothing",
+      "price": 79.50,
+      "stock": 27,
+      "rating": 4.3,
+      "description": "180 gsm merino wool long sleeve, flatlock seams."
+    },
+    {
+      "id": "ATL-004",
+      "name": "Ridge GPS Watch",
+      "category": "electronics",
+      "price": 419.00,
+      "stock": 3,
+      "rating": 4.7,
+      "description": "Dual frequency GNSS, 40 hour battery in full accuracy mode."
+    },
+    {
+      "id": "ATL-005",
+      "name": "Basecamp Headlamp 600",
+      "category": "electronics",
+      "price": 64.90,
+      "stock": 41,
+      "rating": 4.1,
+      "description": "600 lumen rechargeable headlamp with a reactive light sensor."
+    },
+    {
+      "id": "ATL-006",
+      "name": "Granite Trekking Poles",
+      "category": "equipment",
+      "price": 98.00,
+      "stock": 0,
+      "rating": 4.4,
+      "description": "Carbon Z-fold poles, 420 g the pair, cork grips."
+    },
+    {
+      "id": "ATL-007",
+      "name": "Vertex Climbing Harness",
+      "category": "equipment",
+      "price": 89.90,
+      "stock": 11,
+      "rating": 4.5,
+      "description": "Four gear loops, EN 12277 type C certified."
+    },
+    {
+      "id": "ATL-008",
+      "name": "Drylite Sleeping Bag -5°C",
+      "category": "equipment",
+      "price": 199.00,
+      "stock": 8,
+      "rating": 4.2,
+      "description": "Hydrophobic down, comfort rating -5 °C, 1.1 kg."
+    }
+  ],
+  "currency …[truncated]</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-001 → 200 (31 ms)
+request : <empty>
+response: {"id":"ATL-001","name":"Atlas Trail Backpack 35L","category":"backpacks","price":129.9,"stock":14,"rating":4.6,"description":"Weatherproof 35 litre pack with a suspended mesh back panel."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-002 → 200 (7 ms)
+request : <empty>
+response: {"id":"ATL-002","name":"Summit Down Jacket","category":"clothing","price":249.0,"stock":6,"rating":4.8,"description":"800 fill power down, 320 g, packs into its own chest pocket."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-003 → 200 (7 ms)
+request : <empty>
+response: {"id":"ATL-003","name":"Nomad Merino Base Layer","category":"clothing","price":79.5,"stock":27,"rating":4.3,"description":"180 gsm merino wool long sleeve, flatlock seams."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-004 → 200 (8 ms)
+request : <empty>
+response: {"id":"ATL-004","name":"Ridge GPS Watch","category":"electronics","price":419.0,"stock":3,"rating":4.7,"description":"Dual frequency GNSS, 40 hour battery in full accuracy mode."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-005 → 200 (7 ms)
+request : <empty>
+response: {"id":"ATL-005","name":"Basecamp Headlamp 600","category":"electronics","price":64.9,"stock":41,"rating":4.1,"description":"600 lumen rechargeable headlamp with a reactive light sensor."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-006 → 200 (7 ms)
+request : <empty>
+response: {"id":"ATL-006","name":"Granite Trekking Poles","category":"equipment","price":98.0,"stock":0,"rating":4.4,"description":"Carbon Z-fold poles, 420 g the pair, cork grips."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-007 → 200 (6 ms)
+request : <empty>
+response: {"id":"ATL-007","name":"Vertex Climbing Harness","category":"equipment","price":89.9,"stock":11,"rating":4.5,"description":"Four gear loops, EN 12277 type C certified."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-008 → 200 (7 ms)
+request : <empty>
+response: {"id":"ATL-008","name":"Drylite Sleeping Bag -5°C","category":"equipment","price":199.0,"stock":8,"rating":4.2,"description":"Hydrophobic down, comfort rating -5 °C, 1.1 kg."}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 1348 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="33"
+          author="QAAutomation"
+          tag="api regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">readOnlyAccountHasNoCheckoutPermission</p>
+            <p class="text-sm">
+              <span>10:45:51 PM</span> / <span>00:00:01:169</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">readOnlyAccountHasNoCheckoutPermission</h5>
+<span class='badge badge-success'>08.03.2026 10:45:51 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:01:169</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A read-only account is authenticated but carries no checkout permission</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:51 PM</td>
+        <td>
+          <pre>POST http://127.0.0.1:42159/api/auth/login → 200 (208 ms)
+request : {"password":"********","username":"readonly_user"}
+response: {"username":"readonly_user","token":"********","roles":["CUSTOMER"]}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 1169 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="34"
+          author="QAAutomation"
+          tag="api regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">unknownProductReturnsNotFound</p>
+            <p class="text-sm">
+              <span>10:45:51 PM</span> / <span>00:00:01:170</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">unknownProductReturnsNotFound</h5>
+<span class='badge badge-success'>08.03.2026 10:45:51 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:01:170</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">An unknown product returns 404 with a readable message, not a stack trace</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:51 PM</td>
+        <td>
+          <pre>GET http://127.0.0.1:42159/api/products/ATL-999 → 404 (178 ms)
+request : <empty>
+response: {"error":"product ATL-999 does not exist"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 1170 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="35"
+          author="QAAutomation"
+          tag="api smoke"
+          device="">
+          <div class="test-detail">
+            <p class="name">validCredentialsReturnAToken</p>
+            <p class="text-sm">
+              <span>10:45:52 PM</span> / <span>00:00:00:044</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">validCredentialsReturnAToken</h5>
+<span class='badge badge-success'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:00:044</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">smoke</span></div>
+<div class="m-t-10 m-l-5">Valid credentials return a token and the account roles</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>POST http://127.0.0.1:42159/api/auth/login → 200 (10 ms)
+request : {"password":"********","username":"standard_user"}
+response: {"username":"standard_user","token":"********","roles":["CUSTOMER","CHECKOUT"]}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 43 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="36"
+          author="QAAutomation"
+          tag="api regression"
+          device="">
+          <div class="test-detail">
+            <p class="name">wrongPasswordIsRefused</p>
+            <p class="text-sm">
+              <span>10:45:52 PM</span> / <span>00:00:00:042</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">wrongPasswordIsRefused</h5>
+<span class='badge badge-success'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-danger'>08.03.2026 10:45:52 PM</span>
+<span class='badge badge-default'>00:00:00:042</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">QAAutomation</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">regression</span></div>
+<div class="m-t-10 m-l-5">A wrong password is refused without leaking whether the account exists</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          <pre>POST http://127.0.0.1:42159/api/auth/login → 401 (18 ms)
+request : {"password":"********","username":"standard_user"}
+response: {"error":"Invalid credentials"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>10:45:52 PM</td>
+        <td>
+          Test passed in 41 ms
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">9</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-warning'>1</span>
+</span>
+<p class="name">authorisation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>authorisation</h4>
+<span status="skip" class='badge log badge-warning'>1 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>readOnlyAccountCannotPlaceAnOrder</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>8</span>
+</span>
+<p class="name">api</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>api</h4>
+<span status="pass" class='badge log pass-bg'>8 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>catalogueHonoursItsSchema</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>healthEndpointIsUp</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>lockedAccountIsRefusedWithADedicatedStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>everyProductIsRetrievableById</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>readOnlyAccountHasNoCheckoutPermission</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>unknownProductReturnsNotFound</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>validCredentialsReturnAToken</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>wrongPasswordIsRefused</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-warning'>5</span>
+</span>
+<p class="name">catalogue</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>catalogue</h4>
+<span status="skip" class='badge log badge-warning'>5 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>filteringByCategoryNarrowsTheGrid</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>sortingByPriceIsApplied</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>catalogueFinishesLoading</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>addingProductsUpdatesTheCart</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>outOfStockProductCannotBeAdded</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-warning'>8</span>
+</span>
+<p class="name">authentication</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>authentication</h4>
+<span status="skip" class='badge log badge-warning'>8 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>rejectedSignIn [locked account is refused before the pas…]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>rejectedSignIn [unknown account]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>rejectedSignIn [username left empty]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>rejectedSignIn [password left empty]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>rejectedSignIn [wrong password on a valid account]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>rejectedSignIn [credentials are case sensitive]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>signedOutUserCannotReachTheCatalogue</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>standardUserSignsIn</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">widgets</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>widgets</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>deferredRenderingIsAwaited</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>fileIsUploaded</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>iframeContentIsReachable</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>secondWindowIsReadAndClosed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>nativeDialogsAreHandled</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>shadowDomComponentIsDriven</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>tableSortsNumerically</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>13</span>
+<span class='badge log badge-warning'>14</span>
+</span>
+<p class="name">regression</p>
+<p class="duration text-sm">27 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>regression</h4>
+<span status="pass" class='badge log pass-bg'>13 passed</span>
+<span status="skip" class='badge log badge-warning'>14 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>sortingByPriceIsApplied</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>filteringByCategoryNarrowsTheGrid</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>outOfStockProductCannotBeAdded</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>emptyingTheCartDisablesTheCheckout</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>malformedEmailIsRejected</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>mandatoryFieldsAreEnforced</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>readOnlyAccountCannotPlaceAnOrder</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>aLocatorWithoutFallbacksFailsWithAReadableMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>rejectedSignIn [locked account is refused before the pas…]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>rejectedSignIn [unknown account]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>rejectedSignIn [username left empty]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>rejectedSignIn [password left empty]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>rejectedSignIn [wrong password on a valid account]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>rejectedSignIn [credentials are case sensitive]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>signedOutUserCannotReachTheCatalogue</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>deferredRenderingIsAwaited</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>fileIsUploaded</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>iframeContentIsReachable</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>secondWindowIsReadAndClosed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>nativeDialogsAreHandled</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>shadowDomComponentIsDriven</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>tableSortsNumerically</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>lockedAccountIsRefusedWithADedicatedStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>everyProductIsRetrievableById</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>readOnlyAccountHasNoCheckoutPermission</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>unknownProductReturnsNotFound</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>wrongPasswordIsRefused</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+<span class='badge log badge-warning'>5</span>
+</span>
+<p class="name">smoke</p>
+<p class="duration text-sm">9 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>smoke</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+<span status="skip" class='badge log badge-warning'>5 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>customerCompletesAPurchase</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>addingProductsUpdatesTheCart</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>catalogueFinishesLoading</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>brokenPrimaryStrategyIsHealedAndAudited</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>theApplicationReallyRegeneratesIds</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>standardUserSignsIn</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>catalogueHonoursItsSchema</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>healthEndpointIsUp</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>validCredentialsReturnAToken</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-warning'>1</span>
+</span>
+<p class="name">framework</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>framework</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="skip" class='badge log badge-warning'>1 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>aLocatorWithoutFallbacksFailsWithAReadableMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>brokenPrimaryStrategyIsHealedAndAudited</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>theApplicationReallyRegeneratesIds</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-warning'>5</span>
+</span>
+<p class="name">checkout</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>checkout</h4>
+<span status="skip" class='badge log badge-warning'>5 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>customerCompletesAPurchase</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>emptyingTheCartDisablesTheCheckout</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>malformedEmailIsRejected</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>mandatoryFieldsAreEnforced</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>readOnlyAccountCannotPlaceAnOrder</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>17</span>
+<span class='badge log badge-warning'>19</span>
+</span>
+<p class="name">QAAutomation</p>
+<p class="duration text-sm">36 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>QAAutomation</h4>
+<span status="pass" class='badge log pass-bg'>17 passed</span>
+<span status="skip" class='badge log badge-warning'>19 others</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>customerCompletesAPurchase</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>catalogueFinishesLoading</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>filteringByCategoryNarrowsTheGrid</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>addingProductsUpdatesTheCart</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>outOfStockProductCannotBeAdded</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>sortingByPriceIsApplied</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>emptyingTheCartDisablesTheCheckout</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>malformedEmailIsRejected</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>mandatoryFieldsAreEnforced</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>readOnlyAccountCannotPlaceAnOrder</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>aLocatorWithoutFallbacksFailsWithAReadableMessage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>brokenPrimaryStrategyIsHealedAndAudited</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>theApplicationReallyRegeneratesIds</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>rejectedSignIn [locked account is refused before the pas…]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>rejectedSignIn [unknown account]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>rejectedSignIn [username left empty]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>rejectedSignIn [password left empty]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>rejectedSignIn [wrong password on a valid account]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>rejectedSignIn [credentials are case sensitive]</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>signedOutUserCannotReachTheCatalogue</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="warning">
+<td><span class="badge log warning-bg">Warning</span></td>
+<td>22:45:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>standardUserSignsIn</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>deferredRenderingIsAwaited</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>fileIsUploaded</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>iframeContentIsReachable</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>secondWindowIsReadAndClosed</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>nativeDialogsAreHandled</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>shadowDomComponentIsDriven</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>tableSortsNumerically</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>catalogueHonoursItsSchema</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>healthEndpointIsUp</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>lockedAccountIsRefusedWithADedicatedStatus</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>everyProductIsRetrievableById</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>readOnlyAccountHasNoCheckoutPermission</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>unknownProductReturnsNotFound</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>validCredentialsReturnAToken</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:45:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>wrongPasswordIsRefused</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>2026-08-03 22:45:12</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>2026-08-03 22:45:52</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>17</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='47%'>
+<b>17</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='52%'>19</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='11%'><b>36</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>281</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"sortingByPriceIsApplied":2.609,"filteringByCategoryNarrowsTheGrid":2.58,"catalogueFinishesLoading":7.737,"outOfStockProductCannotBeAdded":2.536,"addingProductsUpdatesTheCart":5.893,"customerCompletesAPurchase":7.368,"emptyingTheCartDisablesTheCheckout":20.212,"malformedEmailIsRejected":6.093,"mandatoryFieldsAreEnforced":5.813,"readOnlyAccountCannotPlaceAnOrder":6.319,"aLocatorWithoutFallbacksFailsWithAReadableMessage":2.417,"brokenPrimaryStrategyIsHealedAndAudited":2.121,"theApplicationReallyRegeneratesIds":2.032,"rejectedSignIn [locked account is refused before the pas…]":2.962,"rejectedSignIn [unknown account]":2.191,"rejectedSignIn [username left empty]":2.548,"rejectedSignIn [password left empty]":1.953,"rejectedSignIn [wrong password on a valid account]":2.638,"rejectedSignIn [credentials are case sensitive]":2.68,"signedOutUserCannotReachTheCatalogue":3.187,"standardUserSignsIn":2.511,"deferredRenderingIsAwaited":2.921,"fileIsUploaded":0.594,"iframeContentIsReachable":1.066,"secondWindowIsReadAndClosed":0.962,"nativeDialogsAreHandled":1.46,"shadowDomComponentIsDriven":0.987,"tableSortsNumerically":0.589,"catalogueHonoursItsSchema":1.2,"healthEndpointIsUp":1.175,"lockedAccountIsRefusedWithADedicatedStatus":1.172,"everyProductIsRetrievableById":1.347,"readOnlyAccountHasNoCheckoutPermission":1.169,"unknownProductReturnsNotFound":1.17,"validCredentialsReturnAToken":0.044,"wrongPasswordIsRefused":0.042
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>QAAutomation</td>
+<td>17</td>
+<td>0</td>
+<td>0</td>
+<td>19</td>
+<td>47.222%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>authorisation</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>api</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>catalogue</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>authentication</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>8</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>widgets</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>regression</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>14</td>
+<td>48.148%</td>
+</tr>
+<tr>
+<td>smoke</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>44.444%</td>
+</tr>
+<tr>
+<td>framework</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>66.667%</td>
+</tr>
+<tr>
+<td>checkout</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td>sandbox</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Headless</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Execution</td>
+<td>Local</td>
+</tr>
+<tr>
+<td>Self-healing locators</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Retry policy</td>
+<td>1 retry per failed test</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>21.0.11</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Linux amd64</td>
+</tr>
+<tr>
+<td>Base URL</td>
+<td>http://127.0.0.1:42159</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 17,
+failParent: 0,
+warningParent: 19,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 36,
+failEvents: 0,
+warningEvents: 28,
+skipEvents: 0,
+infoEvents: 253
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
