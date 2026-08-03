@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Logging strategy
+  ────────────────
+  Every line carries %X{testName}: with eight browsers running in parallel, a log
+  file without the test name in each line is unreadable and therefore useless.
+  The console stays terse for humans; the file keeps DEBUG for post-mortems.
+-->
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="console.pattern">%highlight{%-5level} %style{[%X{testName}]}{cyan} %msg%n</Property>
+        <Property name="file.pattern">%d{HH:mm:ss.SSS} %-5level [%t] [%X{testName}] %logger{1.} - %msg%n</Property>
+        <Property name="log.dir">target/atlas-report/logs</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${console.pattern}"/>
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Console>
+
+        <RollingFile name="File" fileName="${log.dir}/atlas.log"
+                     filePattern="${log.dir}/atlas-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${file.pattern}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Selenium and HTTP clients are extremely chatty at INFO. -->
+        <Logger name="org.openqa.selenium" level="WARN"/>
+        <Logger name="org.apache.hc" level="WARN"/>
+        <Logger name="io.netty" level="WARN"/>
+        <Logger name="com.sun.net.httpserver" level="WARN"/>
+
+        <Logger name="io.atlas.qa" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>
