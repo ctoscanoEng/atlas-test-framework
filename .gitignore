@@ -1,0 +1,24 @@
+# ---- build output -----------------------------------------------------------
+target/
+*.log
+
+# ---- IDE --------------------------------------------------------------------
+# The project is IDE-agnostic on purpose: it is imported as a Maven project and
+# every setting that matters lives in pom.xml, not in a workspace file.
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+bin/
+.vscode/
+
+# ---- OS ---------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ---- local overrides --------------------------------------------------------
+# Never commit environment specific credentials: they belong in the CI secret
+# store and reach the framework as ATLAS_* environment variables.
+src/test/resources/config/atlas-local.properties
+.env

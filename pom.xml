@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.atlas.qa</groupId>
+    <artifactId>atlas-test-framework</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>ATLAS :: Automated Test Layer &amp; Assurance Suite</name>
+    <description>
+        Hybrid test automation framework: Selenium WebDriver + TestNG + Cucumber BDD,
+        with self-healing locators, thread-safe parallel execution, Grid/Docker support
+        and a self-contained web application under test.
+    </description>
+
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- ==== Library versions (single source of truth) ==== -->
+        <selenium.version>4.33.0</selenium.version>
+        <testng.version>7.11.0</testng.version>
+        <cucumber.version>7.22.1</cucumber.version>
+        <extentreports.version>5.1.2</extentreports.version>
+        <log4j.version>2.24.3</log4j.version>
+        <restassured.version>5.5.2</restassured.version>
+        <jackson.version>2.19.0</jackson.version>
+        <poi.version>5.4.1</poi.version>
+        <datafaker.version>2.4.3</datafaker.version>
+        <assertj.version>3.27.3</assertj.version>
+        <awaitility.version>4.3.0</awaitility.version>
+        <commons.lang3.version>3.17.0</commons.lang3.version>
+
+        <!-- ==== Plugin versions ==== -->
+        <compiler.plugin.version>3.13.0</compiler.plugin.version>
+        <surefire.plugin.version>3.5.2</surefire.plugin.version>
+        <failsafe.plugin.version>3.5.2</failsafe.plugin.version>
+        <resources.plugin.version>3.3.1</resources.plugin.version>
+
+        <!-- ==== Default runtime switches (override with -D on the command line) ==== -->
+        <suite.file>src/test/resources/suites/sandbox-regression.xml</suite.file>
+        <atlas.env>sandbox</atlas.env>
+        <atlas.browser>chrome</atlas.browser>
+        <atlas.headless>true</atlas.headless>
+        <atlas.threads>4</atlas.threads>
+        <atlas.remote>false</atlas.remote>
+        <atlas.gridUrl>http://localhost:4444/wd/hub</atlas.gridUrl>
+        <cucumber.tags>@smoke</cucumber.tags>
+        <skip.tests>false</skip.tests>
+    </properties>
+
+    <dependencies>
+        <!-- ============================ Browser automation ============================ -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- ============================ Test runners ============================ -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <!-- Constructor injection of the scenario context into the step classes:
+             no static state shared between scenarios, so BDD runs in parallel too. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <!-- ============================ Assertions ============================ -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <version>${awaitility.version}</version>
+        </dependency>
+
+        <!-- ============================ Reporting ============================ -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports.version}</version>
+        </dependency>
+
+        <!-- ============================ Logging ============================ -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <!-- ============================ API testing ============================ -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
+
+        <!-- ============================ Test data ============================ -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>${datafaker.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.plugin.version}</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.plugin.version}</version>
+                <configuration>
+                    <skipTests>${skip.tests}</skipTests>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suite.file}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <!-- Runtime switches are forwarded to the forked JVM, where
+                         ConfigLoader reads them with the highest precedence. -->
+                    <systemPropertyVariables>
+                        <atlas.env>${atlas.env}</atlas.env>
+                        <atlas.browser>${atlas.browser}</atlas.browser>
+                        <atlas.headless>${atlas.headless}</atlas.headless>
+                        <atlas.remote>${atlas.remote}</atlas.remote>
+                        <atlas.gridUrl>${atlas.gridUrl}</atlas.gridUrl>
+                        <cucumber.filter.tags>${cucumber.tags}</cucumber.filter.tags>
+                    </systemPropertyVariables>
+                    <properties>
+                        <property>
+                            <name>dataproviderthreadcount</name>
+                            <value>${atlas.threads}</value>
+                        </property>
+                    </properties>
+                    <argLine>-Xmx1024m -Dfile.encoding=UTF-8</argLine>
+                    <!-- A red suite must fail the build: no silent green pipelines. -->
+                    <testFailureIgnore>false</testFailureIgnore>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <!-- ===================================================================
+             Execution profiles. Each one only re-points the suite file and the
+             runtime switches; no code changes are ever required to change target.
+             =================================================================== -->
+        <profile>
+            <id>smoke</id>
+            <properties>
+                <suite.file>src/test/resources/suites/smoke.xml</suite.file>
+                <atlas.threads>4</atlas.threads>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>regression</id>
+            <properties>
+                <suite.file>src/test/resources/suites/sandbox-regression.xml</suite.file>
+                <atlas.threads>6</atlas.threads>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>e2e</id>
+            <properties>
+                <suite.file>src/test/resources/suites/e2e-public.xml</suite.file>
+                <atlas.env>staging</atlas.env>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>api</id>
+            <properties>
+                <suite.file>src/test/resources/suites/api.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>bdd</id>
+            <properties>
+                <suite.file>src/test/resources/suites/bdd.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>cross-browser</id>
+            <properties>
+                <suite.file>src/test/resources/suites/cross-browser.xml</suite.file>
+            </properties>
+        </profile>
+
+        <!-- Run everything against a Selenium Grid / Docker instead of local browsers -->
+        <profile>
+            <id>grid</id>
+            <properties>
+                <atlas.remote>true</atlas.remote>
+                <atlas.gridUrl>http://localhost:4444/wd/hub</atlas.gridUrl>
+                <atlas.threads>8</atlas.threads>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>headed</id>
+            <properties>
+                <atlas.headless>false</atlas.headless>
+                <atlas.threads>1</atlas.threads>
+            </properties>
+        </profile>
+    </profiles>
+</project>
