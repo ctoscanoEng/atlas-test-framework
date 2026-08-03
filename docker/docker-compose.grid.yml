@@ -1,0 +1,74 @@
+# =============================================================================
+#  Selenium Grid — browsers as disposable infrastructure
+#
+#     docker compose -f docker/docker-compose.grid.yml up -d
+#     ./mvnw test -Pregression,grid
+#     open http://localhost:4444/ui       # live sessions and queue
+#
+#  Why a hub/node topology rather than a single standalone container: it is the
+#  shape a real Grid takes when it grows, and it lets the same file scale to
+#  twenty nodes by changing one number.
+# =============================================================================
+services:
+
+  selenium-hub:
+    image: selenium/hub:4.33
+    container_name: atlas-grid-hub
+    ports:
+      - "4442:4442"   # event bus, publish
+      - "4443:4443"   # event bus, subscribe
+      - "4444:4444"   # the endpoint the tests talk to
+    environment:
+      # A session that cannot be served must fail fast rather than hang the suite.
+      - SE_SESSION_REQUEST_TIMEOUT=120
+      - SE_SESSION_RETRY_INTERVAL=3
+      - SE_NODE_MAX_SESSIONS=4
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444/wd/hub/status"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  chrome:
+    image: selenium/node-chromium:4.33
+    depends_on:
+      - selenium-hub
+    # Chrome writes its rendering cache to /dev/shm; the 64 MB Docker default
+    # makes tabs crash under load, which looks exactly like a flaky test.
+    shm_size: 2gb
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=4
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_SCREEN_WIDTH=1920
+      - SE_SCREEN_HEIGHT=1080
+    deploy:
+      replicas: 2
+
+  firefox:
+    image: selenium/node-firefox:4.33
+    depends_on:
+      - selenium-hub
+    shm_size: 2gb
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=2
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_SCREEN_WIDTH=1920
+      - SE_SCREEN_HEIGHT=1080
+
+  edge:
+    image: selenium/node-edge:4.33
+    depends_on:
+      - selenium-hub
+    shm_size: 2gb
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=2
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true

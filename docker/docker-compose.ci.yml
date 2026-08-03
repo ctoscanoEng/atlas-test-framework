@@ -1,0 +1,56 @@
+# =============================================================================
+#  The whole pipeline in one command
+#
+#     docker compose -f docker/docker-compose.ci.yml up --build --exit-code-from atlas-tests
+#
+#  Grid, browsers, application under test and suite: a machine with Docker and
+#  nothing else installed reproduces the CI run exactly. This is the answer to
+#  "it works on my machine".
+# =============================================================================
+services:
+
+  selenium-hub:
+    image: selenium/hub:4.33
+    environment:
+      - SE_SESSION_REQUEST_TIMEOUT=120
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444/wd/hub/status"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  chrome:
+    image: selenium/node-chromium:4.33
+    shm_size: 2gb
+    depends_on:
+      selenium-hub:
+        condition: service_healthy
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=4
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+
+  atlas-tests:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    # The hostname the browsers use to reach the application under test: it must
+    # match ATLAS_SANDBOX_ADVERTISED_HOST, hence the explicit container name.
+    hostname: atlas-tests
+    container_name: atlas-tests
+    depends_on:
+      selenium-hub:
+        condition: service_healthy
+    environment:
+      - ATLAS_REMOTE=true
+      - ATLAS_GRID_URL=http://selenium-hub:4444/wd/hub
+      - ATLAS_BROWSER=chrome
+      - ATLAS_HEADLESS=true
+      - ATLAS_SANDBOX_BIND_ADDRESS=0.0.0.0
+      - ATLAS_SANDBOX_ADVERTISED_HOST=atlas-tests
+    volumes:
+      # Reports survive the container: this is what the pipeline archives.
+      - ../target/atlas-report:/atlas/target/atlas-report
+    command: ["-Pregression"]

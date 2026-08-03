@@ -1,0 +1,140 @@
+# =============================================================================
+#  Continuous integration
+#
+#  Three stages, each one earning its place:
+#    1. api     — seconds. Fails the build before a browser is ever started.
+#    2. smoke   — ~1 min on Chrome. The gate for every push.
+#    3. matrix  — Chrome + Firefox, full regression, on pull requests and nightly.
+#
+#  Nothing here depends on a public demo site, so a red pipeline always means a
+#  defect in this repository.
+# =============================================================================
+name: ATLAS
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 3 * * *"     # nightly regression
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: "Maven profile to run"
+        default: regression
+        type: choice
+        options: [smoke, regression, api, bdd, cross-browser]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  service-contracts:
+    name: Service contracts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: temurin
+          cache: maven
+      - name: Run the API suite
+        run: ./mvnw -B test -Papi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report-api
+          path: target/atlas-report
+          retention-days: 14
+
+  smoke:
+    name: Smoke (chrome)
+    needs: service-contracts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: temurin
+          cache: maven
+      # No browser installation step: Selenium Manager resolves the driver, and
+      # the GitHub runner image already ships Chrome.
+      - name: Run the smoke suite
+        run: ./mvnw -B test -Psmoke -Datlas.headless=true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report-smoke
+          path: target/atlas-report
+          retention-days: 14
+
+  regression:
+    name: Regression (${{ matrix.browser }})
+    needs: smoke
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false          # one browser failing must not hide the others
+      matrix:
+        browser: [chrome, firefox]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: temurin
+          cache: maven
+      - name: Run the regression suite
+        run: ./mvnw -B test -Pregression -Datlas.browser=${{ matrix.browser }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report-regression-${{ matrix.browser }}
+          path: target/atlas-report
+          retention-days: 14
+
+  behaviour:
+    name: BDD scenarios
+    needs: smoke
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: temurin
+          cache: maven
+      - name: Run the Gherkin scenarios
+        run: ./mvnw -B test -Pbdd -Dcucumber.tags="@smoke or @regression"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report-bdd
+          path: target/atlas-report
+          retention-days: 14
+
+  publish-report:
+    name: Publish the report
+    needs: [regression, behaviour]
+    if: always() && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: report-regression-chrome
+          path: report
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./report
+          destination_dir: latest
