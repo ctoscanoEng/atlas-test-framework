@@ -40,66 +40,69 @@ that no description can undo.
 > comment — less reach, more credibility. Attach one screenshot, and make it the HTML report or
 > `locator-backlog.md`, never the certificate: the certificate is the attachment, not the content.
 
-### Italiano
+### Italiano — versione da pubblicare (2.889 caratteri, il limite è 3.000)
 
-> **Dopo due anni di Robot Framework e Python, davanti a un test instabile il mio riflesso condizionato era diventato uno solo: `Sleep    5s`.**
+> **In Robot Framework due spazi separano un argomento dal successivo. Uno spazio solo, no.**
 >
-> Funzionava. Quasi sempre. Ed è esattamente il problema.
+> Per due anni il mio errore più costoso non è stato un bug: è stato uno spazio. E lo scoprivo
+> sempre a runtime, mai un secondo prima.
 >
-> Robot Framework è uno strumento serio e per certi contesti resta la scelta giusta — ma dopo due
-> anni sullo stesso stack mi ero costruito una comfort zone fatta di keyword già pronte e di
-> soluzioni che *sembravano* funzionare. Avevo bisogno di una rinfrescata bella forte, non di un
-> ripasso.
+> Robot Framework è uno strumento serio e in molti contesti resta la scelta giusta. Ma dopo due anni
+> sullo stesso stack mi ero costruito una comfort zone, e avevo voglia di tornare a un linguaggio
+> dove certe cose te le dice il compilatore e non la pipeline delle 3 di notte.
 >
 > Così ho fatto un corso completo su **Selenium 4 + Java**: Java e OOP, WebDriver, TestNG, Page
-> Object Model, Selenium Grid, Docker, design di framework, Cucumber BDD e CI/CD. Dodici moduli,
-> zero scorciatoie.
+> Object Model, Selenium Grid, Docker, design di framework, Cucumber BDD e CI/CD.
 >
 > E invece di consegnare il solito progetto finale contro un sito demo pubblico, ne ho costruito uno
-> mio: **ATLAS — Automated Test Layer & Assurance Suite**.
+> mio: **ATLAS**.
 >
 > **Tre problemi che volevo risolvere sul serio, non aggirare:**
 >
 > **1 · Le suite che diventano rosse per motivi che non sono difetti.**
 > Quasi tutti i progetti da portfolio puntano a un sito demo pubblico: il giorno che quel sito
-> cambia, salta tutto. ATLAS **si porta dietro la propria applicazione sotto test** — una SPA + API
-> JSON servite in-process dall'HttpServer del JDK, su porta effimera. La suite gira offline, in
-> aereo, su un agent CI blindato. Se la build è rossa, il problema è mio.
+> cambia, salta tutto. ATLAS si porta dietro la propria applicazione sotto test, servita in-process
+> su porta effimera. Gira offline, in aereo, su un agent CI blindato. Se la build è rossa, il
+> problema è mio.
 >
 > **2 · I locator che marciscono.**
-> L'applicazione rigenera *di proposito* gli id degli elementi a ogni caricamento, come fa una
+> L'applicazione rigenera di proposito gli id degli elementi a ogni caricamento, come fa una
 > component library a ogni deploy. Ogni locator dichiara una strategia primaria e dei fallback
-> ordinati; il resolver le interroga tutte dentro un'unica deadline — ~10 ms di costo, non un
-> timeout da 15 secondi. La suite resta verde **e ogni elemento "guarito" finisce in un file di
-> backlog di manutenzione generato a fine run.** Il self-healing senza quel file serve solo a far
-> marcire i page object in silenzio.
+> ordinati; il resolver le interroga tutte dentro un'unica deadline — 10 ms di costo, non un timeout
+> da 15 secondi. La suite resta verde e ogni elemento "guarito" finisce in un backlog di
+> manutenzione generato a fine run. Il self-healing senza quel file serve solo a far marcire i page
+> object in silenzio.
 >
 > **3 · I retry che nascondono le regressioni.**
 > Riprovare ogni fallimento è il modo più veloce per non fidarsi più della propria suite. ATLAS
 > riprova solo i fallimenti ambientali: un'asserzione fallita è un difetto e resta rossa.
 >
-> **E sì: `Thread.sleep` non compare in nessuna delle 5.000 righe del progetto.** Ogni attesa è una
-> condizione con una scadenza. Vecchie abitudini, sepolte come si deve.
+> E sì: `Thread.sleep` non compare in nessuna delle 5.000 righe del progetto. Ogni attesa è una
+> condizione con una scadenza.
 >
 > **I numeri:** 36 test su 6 thread in 37 secondi · 8 test di contratto REST con validazione JSON
-> Schema in ~1 secondo · 8 scenari Gherkin che riusano *esattamente* gli stessi page object ·
-> Selenium Grid + Docker Compose · pipeline GitHub Actions a stadi (api → smoke → regressione
-> cross-browser) e un Jenkinsfile.
+> Schema in 1 secondo · 8 scenari Gherkin che riusano esattamente gli stessi page object · Selenium
+> Grid + Docker Compose · pipeline GitHub Actions a stadi e un Jenkinsfile.
 >
-> **Scelte tecniche che sono pronto a difendere:** niente PageFactory/@FindBy (i proxy risolvono su
-> una sola strategia e non sanno esprimere fallback) · sessione browser legata al thread via
-> ThreadLocal · implicit wait a zero di proposito · importi in BigDecimal, mai double · listener
-> registrati via META-INF/services, così "Run As → TestNG Test" in Eclipse si comporta identico alla
-> pipeline.
+> **Scelte tecniche che sono pronto a difendere:** niente PageFactory (i proxy risolvono su una sola
+> strategia e non sanno esprimere fallback) · sessione browser legata al thread via ThreadLocal ·
+> implicit wait a zero di proposito · importi in BigDecimal, mai double.
 >
-> Tutto documentato — **compreso quello che ho deciso di NON fare e perché**, e qual è oggi il punto
-> più debole del progetto.
+> Tutto documentato, compreso quello che ho deciso di NON fare e perché.
 >
-> 🔗 Repository: github.com/ctoscanoEng/atlas-test-framework · 📜 Certificazione: <link>
->
-> Ogni feedback da chi fa questo mestiere è più che benvenuto. Soprattutto quello scomodo.
+> Repository e report dell'ultima esecuzione nei commenti. Ogni feedback da chi fa questo mestiere è
+> benvenuto, soprattutto quello scomodo.
 >
 > #TestAutomation #Selenium #Java #TestNG #Cucumber #QAEngineering #SDET #CICD
+
+**Aperture alternative**, se quella sugli spazi non ti convince — il resto del post non cambia:
+
+> *(a)* In Robot Framework un test si scrive in quattro righe. In Java servono quattro file.
+> Per due anni ho pensato che questo rendesse Robot superiore. Poi ho dovuto **manutenere** quei test.
+
+> *(b)* Il test più stabile che ho scritto in due anni conteneva un `Sleep 5s`.
+> Il framework che ho appena finito non contiene un solo `Thread.sleep`. Ci ho messo due anni a
+> capire perché è la stessa cosa detta in due modi diversi.
 
 ### English
 
@@ -165,6 +168,60 @@ that no description can undo.
 > `Thread.sleep` non compare nemmeno una volta.
 > 36 test, 6 thread, 37 secondi, applicazione sotto test inclusa nel repository.
 > 👇 github.com/ctoscanoEng/atlas-test-framework
+
+---
+
+## 2-bis. Dove va cosa su LinkedIn
+
+Il post è la parte effimera. Un post vive 48 ore; il profilo resta. Cinque posti, cinque funzioni
+diverse — chi ne usa uno solo (il post) spreca il 90% del lavoro.
+
+| Sezione | Vita | Chi la legge | Cosa metterci |
+|---|---|---|---|
+| **Post nel feed** | ~48 h | la tua rete, una volta | il racconto lungo: problemi, scelte, numeri |
+| **In evidenza / Featured** | permanente | chi apre il profilo mesi dopo | il link al repository e il post stesso, appuntati in cima |
+| **Progetti** | permanente | i recruiter che filtrano | scheda strutturata: titolo, periodo, descrizione, link |
+| **Licenze e certificazioni** | permanente | i sistemi ATS | il certificato con ID e URL di verifica |
+| **Titolo (headline)** | permanente | **tutti, sempre** | le parole chiave con cui ti cercano |
+
+**Il titolo è il campo più importante del profilo**, perché è l'unico che compare nei risultati di
+ricerca. I recruiter cercano per stringa: `Selenium`, `Java`, `TestNG`, `automation`. Un titolo come
+"QA appassionato di qualità" non compare in nessuna di quelle ricerche.
+
+```
+Test Automation Engineer · Selenium & Java · Robot Framework/Python · TestNG · Cucumber · CI/CD
+```
+
+**Nella sezione Progetti** conviene collegare la voce alla certificazione (LinkedIn lo permette): i
+due elementi si rinforzano invece di stare in due punti scollegati del profilo.
+
+Testo pronto per la scheda Progetti:
+
+> **ATLAS — Test Automation Framework** *(progetto personale)*
+>
+> Framework di automazione ibrido UI + API in Java 17 e Selenium 4, con motore di locator
+> self-healing, esecuzione parallela thread-safe e un'applicazione sotto test inclusa nel repository
+> che rende la suite eseguibile offline e deterministica.
+>
+> • 36 test su 6 thread in 37 secondi; 8 test di contratto REST con validazione JSON Schema
+> • Page Object Model senza PageFactory, per supportare strategie di locator multiple con fallback
+> • Politica di retry che distingue i fallimenti ambientali dalle asserzioni fallite
+> • Selenium Grid e Docker Compose; pipeline GitHub Actions a stadi e Jenkinsfile dichiarativo
+> • Report HTML con evidenze al fallimento e backlog automatico dei locator da riparare
+>
+> Java · Selenium 4 · TestNG · Cucumber · REST Assured · Docker · Maven · GitHub Actions · Jenkins
+
+**Nella sezione Licenze e certificazioni** compila anche *Credential ID* e *Credential URL*: sono i
+campi che rendono la certificazione verificabile invece che dichiarata.
+
+**Quando pubblicare:** martedì o mercoledì, tra le 8:00 e le 10:00. Ma conta molto di più
+un'altra cosa: **stai davanti al post per le prime due ore** e rispondi a ogni commento. LinkedIn
+mostra il post a più persone se genera conversazione nella prima ora, e una risposta tecnica a un
+commento tecnico è la cosa che fa arrivare i messaggi privati che contano.
+
+**Cosa non fare:** non pubblicare la sola immagine del certificato; non usare più di 8 hashtag; non
+scrivere "sono entusiasta di annunciare" (è la formula che fa scorrere il pollice); non mettere
+numeri che non puoi dimostrare.
 
 ---
 
