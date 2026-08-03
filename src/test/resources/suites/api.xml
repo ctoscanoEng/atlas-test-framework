@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Service layer only: no browser is ever started by this suite.
+    Runs in seconds, which is what makes it usable as a pre-commit gate.
+-->
+<suite name="ATLAS · api" parallel="methods" thread-count="8" verbose="1">
+
+    <test name="Catalogue and authentication contracts">
+        <packages>
+            <package name="io.atlas.qa.api.tests"/>
+        </packages>
+    </test>
+</suite>

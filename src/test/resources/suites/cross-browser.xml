@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    The same tests, three engines, all at once.
+
+    parallel="tests" runs the three <test> blocks concurrently; the browser is
+    injected as a TestNG parameter and read by BaseWebTest. Nothing else changes,
+    which is the entire point of having a driver factory.
+
+    Locally this needs Chrome, Firefox and Edge installed. In the pipeline it is
+    meant to be paired with -Pgrid, where the browsers are containers.
+-->
+<suite name="ATLAS · cross browser" parallel="tests" thread-count="3" verbose="1">
+
+    <test name="Chrome">
+        <parameter name="browser" value="chrome"/>
+        <groups><run><include name="smoke"/></run></groups>
+        <packages><package name="io.atlas.qa.sandbox.tests"/></packages>
+    </test>
+
+    <test name="Firefox">
+        <parameter name="browser" value="firefox"/>
+        <groups><run><include name="smoke"/></run></groups>
+        <packages><package name="io.atlas.qa.sandbox.tests"/></packages>
+    </test>
+
+    <test name="Edge">
+        <parameter name="browser" value="edge"/>
+        <groups><run><include name="smoke"/></run></groups>
+        <packages><package name="io.atlas.qa.sandbox.tests"/></packages>
+    </test>
+</suite>

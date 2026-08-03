@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    The framework pointed at a third-party application (staging overlay).
+
+    Deliberately excluded from the merge gate: this suite depends on a public
+    demo site nobody on the team controls, and a pipeline that goes red because
+    someone else's server is slow teaches the team to ignore red pipelines.
+-->
+<suite name="ATLAS · public e2e" parallel="methods" thread-count="2" verbose="1">
+
+    <test name="Third-party store journey">
+        <groups>
+            <run>
+                <include name="e2e"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="io.atlas.qa.e2e.tests"/>
+        </packages>
+    </test>
+</suite>

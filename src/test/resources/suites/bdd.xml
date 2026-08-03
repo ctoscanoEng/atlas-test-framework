@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Gherkin scenarios, backed by the very same page objects as the TestNG suite.
+    Filter them with -Dcucumber.tags="@smoke and not @authorisation".
+-->
+<suite name="ATLAS · bdd" verbose="1" data-provider-thread-count="4">
+
+    <test name="Business scenarios">
+        <classes>
+            <class name="io.atlas.qa.bdd.runner.CucumberTestRunner"/>
+        </classes>
+    </test>
+</suite>

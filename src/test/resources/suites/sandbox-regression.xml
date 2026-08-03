@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Full regression against the self-hosted application.
+    Deterministic and offline: this is the suite that gates a merge.
+-->
+<suite name="ATLAS · regression" parallel="methods" thread-count="6" verbose="1"
+       configfailurepolicy="continue" data-provider-thread-count="4">
+
+    <test name="User interface">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+                <exclude name="e2e"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="io.atlas.qa.sandbox.tests"/>
+        </packages>
+    </test>
+
+    <test name="Service layer">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="io.atlas.qa.api.tests"/>
+        </packages>
+    </test>
+</suite>

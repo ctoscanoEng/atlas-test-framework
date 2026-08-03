@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Smoke suite — the answer to "is this build worth testing further?"
+    Target: under two minutes. Runs on every push.
+
+    Listeners are not declared here: they are registered through
+    META-INF/services/org.testng.ITestNGListener so that a test launched from
+    Eclipse behaves exactly like the same test launched by the pipeline.
+-->
+<suite name="ATLAS · smoke" parallel="methods" thread-count="4" verbose="1"
+       configfailurepolicy="continue">
+
+    <test name="Application smoke">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="io.atlas.qa.sandbox.tests"/>
+            <package name="io.atlas.qa.api.tests"/>
+        </packages>
+    </test>
+</suite>
