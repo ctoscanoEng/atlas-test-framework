@@ -287,6 +287,8 @@ while the suite runs. Credentials are listed on the sign-in page.
 - **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — every design decision and the trade-off behind it
 - **[docs/COURSE-ROADMAP.md](docs/COURSE-ROADMAP.md)** — the twelve training modules mapped onto this code, with the exercises that extend it
 - **[docs/PORTFOLIO.md](docs/PORTFOLIO.md)** — how to present the project: repository, description, interview answers
+- 🇮🇹 **[docs/it/GUIDA-COMPLETA.md](docs/it/GUIDA-COMPLETA.md)** — the long-form Italian walkthrough: every component explained from scratch, including how the application under test is built
+- 🇮🇹 **[docs/it/JENKINS.md](docs/it/JENKINS.md)** — step-by-step guide to running this pipeline on a local Jenkins
 
 ---
 

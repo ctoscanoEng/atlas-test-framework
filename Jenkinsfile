@@ -19,6 +19,10 @@ pipeline {
         choice(name: 'BROWSER', choices: ['chrome', 'firefox', 'edge'], description: 'Target browser')
         booleanParam(name: 'USE_GRID', defaultValue: true,
                      description: 'Run the browsers on the dockerised Selenium Grid')
+        string(name: 'SANDBOX_HOST', defaultValue: 'host.docker.internal',
+               description: '''Hostname the containerised browsers use to reach the application \
+under test, which is served by the build itself. Docker Desktop (macOS/Windows): host.docker.internal. \
+Linux: the IP of the docker0 bridge, usually 172.17.0.1. Ignored when USE_GRID is off.''')
     }
 
     options {
@@ -31,10 +35,6 @@ pipeline {
     environment {
         ATLAS_HEADLESS = 'true'
         ATLAS_BROWSER  = "${params.BROWSER}"
-        // Browsers live in their own containers, so the application under test
-        // must listen on every interface and advertise a resolvable hostname.
-        ATLAS_SANDBOX_BIND_ADDRESS    = '0.0.0.0'
-        ATLAS_SANDBOX_ADVERTISED_HOST = "${env.HOSTNAME ?: 'localhost'}"
     }
 
     stages {
@@ -63,10 +63,22 @@ pipeline {
         stage('Browser suite') {
             steps {
                 script {
-                    def gridFlags = params.USE_GRID
+                    // The application under test runs inside this build. When the
+                    // browsers are containers they cannot reach 127.0.0.1 of the
+                    // agent, so the server must listen on every interface and
+                    // advertise a hostname those containers can resolve. With local
+                    // browsers the opposite is true: the loopback is the only
+                    // address that certainly works.
+                    def bindAddress    = params.USE_GRID ? '0.0.0.0' : '127.0.0.1'
+                    def advertisedHost = params.USE_GRID ? params.SANDBOX_HOST : '127.0.0.1'
+                    def gridFlags      = params.USE_GRID
                             ? '-Pgrid -Datlas.gridUrl=http://localhost:4444/wd/hub'
                             : ''
-                    sh "./mvnw -B test -P${params.SUITE} ${gridFlags}"
+
+                    withEnv(["ATLAS_SANDBOX_BIND_ADDRESS=${bindAddress}",
+                             "ATLAS_SANDBOX_ADVERTISED_HOST=${advertisedHost}"]) {
+                        sh "./mvnw -B test -P${params.SUITE} ${gridFlags}"
+                    }
                 }
             }
         }
