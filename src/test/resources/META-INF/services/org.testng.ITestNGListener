@@ -1,0 +1,10 @@
+# TestNG discovers these listeners through the ServiceLoader mechanism.
+#
+# Why not @Listeners or the suite XML: an IAnnotationTransformer must be
+# registered before TestNG reads the annotations, which @Listeners cannot do,
+# and declaring listeners in every suite file duplicates the policy. Registering
+# them here means a test launched from Eclipse with "Run as > TestNG Test"
+# behaves exactly like the same test launched by Maven in the pipeline.
+io.atlas.qa.core.listener.RetryTransformer
+io.atlas.qa.core.listener.SuiteLifecycleListener
+io.atlas.qa.core.listener.TestReportListener
