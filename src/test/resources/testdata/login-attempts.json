@@ -1,0 +1,38 @@
+[
+  {
+    "scenario": "wrong password on a valid account",
+    "username": "standard_user",
+    "password": "not_the_password",
+    "expectedMessage": "Invalid credentials"
+  },
+  {
+    "scenario": "unknown account",
+    "username": "ghost_user",
+    "password": "atlas_secret",
+    "expectedMessage": "Invalid credentials"
+  },
+  {
+    "scenario": "locked account is refused before the password is even checked",
+    "username": "locked_user",
+    "password": "atlas_secret",
+    "expectedMessage": "Account is locked, contact your administrator"
+  },
+  {
+    "scenario": "username left empty",
+    "username": "",
+    "password": "atlas_secret",
+    "expectedMessage": "Username and password are both required."
+  },
+  {
+    "scenario": "password left empty",
+    "username": "standard_user",
+    "password": "",
+    "expectedMessage": "Username and password are both required."
+  },
+  {
+    "scenario": "credentials are case sensitive",
+    "username": "STANDARD_USER",
+    "password": "atlas_secret",
+    "expectedMessage": "Invalid credentials"
+  }
+]
