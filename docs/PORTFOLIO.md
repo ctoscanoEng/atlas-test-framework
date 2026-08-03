@@ -8,18 +8,16 @@ them together, in that order of emphasis.
 
 ## 1. Repository checklist
 
-- [x] Repository name: `atlas-test-framework` — https://github.com/ctoscanoEng/atlas-test-framework
-- [ ] Description (the one line under the title):
-      *Hybrid Selenium 4 · Java 17 · TestNG · Cucumber framework with self-healing locators, parallel
-      execution, Grid/Docker support and its own application under test — runs offline, one command.*
-- [ ] Topics: `selenium` `selenium-webdriver` `java` `testng` `cucumber` `bdd` `test-automation`
-      `page-object-model` `selenium-grid` `docker` `ci-cd` `qa-automation`
-- [ ] Pinned on your GitHub profile
-- [ ] `README.md` renders correctly (check the tables and the diagram on GitHub, not just locally)
-- [ ] CI badge at the top once the first workflow run is green
-- [ ] Commit history that tells a story: small, dated, meaningful commits — not one "initial commit"
-      containing 60 files
-- [ ] A tag `v1.0.0` on the first complete version
+- [x] Repository: https://github.com/ctoscanoEng/atlas-test-framework
+- [x] Description set (the one line under the title)
+- [x] Topics set: `selenium` `selenium-webdriver` `java` `testng` `cucumber` `bdd` `test-automation`
+      `page-object-model` `selenium-grid` `docker` `ci-cd` `qa-automation` `automation-framework` `sdet`
+- [x] Commit history that tells a story: fourteen scoped commits, not one "initial commit" of 60 files
+- [x] Tag `v1.0.0` on the first complete version
+- [x] CI green on Chrome **and** Firefox, plus the BDD scenarios
+- [x] Live report published: https://ctoscanoeng.github.io/atlas-test-framework/latest/
+- [ ] Pinned on your GitHub profile (Profile → Customize your pins)
+- [ ] `README.md` checked as GitHub renders it — tables and the ASCII diagram, not just locally
 
 **Before pushing:** run `./mvnw test -Pregression` and make sure the report is green on a clean
 clone. A recruiter who clones your repository and sees a red build has learned something about you

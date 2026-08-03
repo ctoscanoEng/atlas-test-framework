@@ -6,6 +6,7 @@
 [![TestNG](https://img.shields.io/badge/TestNG-7.11-blue)](https://testng.org/)
 [![Cucumber](https://img.shields.io/badge/Cucumber-7.22-green)](https://cucumber.io/)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+[![Live report](https://img.shields.io/badge/live%20report-latest%20CI%20run-8a2be2)](https://ctoscanoeng.github.io/atlas-test-framework/latest/)
 
 A hybrid test automation framework built on **Java 17 · Selenium 4 · TestNG · Cucumber**, with a
 **self-healing locator engine**, thread-safe parallel execution, Selenium Grid / Docker support
@@ -20,6 +21,10 @@ cd atlas-test-framework
 ```
 
 No Maven installation, no driver binaries, no demo website, no network. That is the point.
+
+**Prefer to look before you clone?** Every run on `main` publishes its report:
+**[the latest execution, live](https://ctoscanoeng.github.io/atlas-test-framework/latest/)** — steps,
+timings, run configuration and, when something fails, the screenshot and the page source.
 
 ---
 
@@ -51,7 +56,8 @@ the resolver keeps the suite green and files the debt. It is a demonstration, no
 ./mvnw test -Pcross-browser             # Chrome + Firefox + Edge in parallel
 ```
 
-The report lands in `target/atlas-report/index.html`.
+The report lands in `target/atlas-report/index.html` — the same artefact
+[published by CI](https://ctoscanoeng.github.io/atlas-test-framework/latest/).
 
 ### Against a Selenium Grid
 
