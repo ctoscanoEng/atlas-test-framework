@@ -1,511 +1,510 @@
-09:30:55.102 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener - 
+08:38:32.424 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener - 
 ══════════════════════════════════════════════════════════════
  ATLAS — suite 'ATLAS · regression'
 ══════════════════════════════════════════════════════════════
-09:30:55.106 DEBUG [main] [] i.a.q.c.c.ConfigLoader - Loaded 22 keys from config/atlas.properties
-09:30:55.107 DEBUG [main] [] i.a.q.c.c.ConfigLoader - Loaded 2 keys from config/atlas-sandbox.properties
-09:30:55.109 INFO  [main] [] i.a.q.c.c.ConfigLoader - Configuration resolved for environment 'sandbox' (22 keys)
-09:30:55.110 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   browser = chrome
-09:30:55.110 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   credentials.password = ********
-09:30:55.110 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   credentials.username = standard_user
-09:30:55.110 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   env = sandbox
-09:30:55.110 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   gridUrl = http://localhost:4444/wd/hub
-09:30:55.111 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   headless = true
-09:30:55.111 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   locator.selfHealing = true
-09:30:55.111 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   remote = false
-09:30:55.111 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.author = QA Automation
-09:30:55.111 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.directory = target/atlas-report
-09:30:55.111 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.screenshotOnFailure = true
-09:30:55.111 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.screenshotOnStep = false
-09:30:55.112 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.title = ATLAS â Automation Report
-09:30:55.112 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   retry.count = 1
-09:30:55.112 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   sandbox.advertisedHost = 127.0.0.1
-09:30:55.112 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   sandbox.bindAddress = 127.0.0.1
-09:30:55.112 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   sandbox.port = 0
-09:30:55.112 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.explicit = 15
-09:30:55.113 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.pageLoad = 40
-09:30:55.113 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.pollingMillis = 200
-09:30:55.113 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.script = 30
-09:30:55.113 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   window.size = 1920,1080
-09:30:55.336 INFO  [main] [] i.a.q.c.s.SandboxServer - Sandbox application under test started on http://127.0.0.1:39099
-09:30:55.337 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   application under test = http://127.0.0.1:39099
-09:30:55.646 INFO  [main] [] i.a.q.c.r.ReportManager - HTML report will be written to /home/runner/work/atlas-test-framework/atlas-test-framework/target/atlas-report/index.html
-09:31:32.094 INFO  [TestNG-test-User interface-4] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:32.103 INFO  [TestNG-test-User interface-2] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:32.104 INFO  [TestNG-test-User interface-1] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:32.105 INFO  [TestNG-test-User interface-5] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:32.108 INFO  [TestNG-test-User interface-6] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:32.108 INFO  [TestNG-test-User interface-3] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:32.472 DEBUG [TestNG-test-User interface-5] [] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:32.472 DEBUG [TestNG-test-User interface-6] [] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:32.473 DEBUG [TestNG-test-User interface-6] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:32.472 DEBUG [TestNG-test-User interface-1] [] i.a.q.c.d.DriverManager - Active sessions: 1
-09:31:32.474 DEBUG [TestNG-test-User interface-1] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:32.473 DEBUG [TestNG-test-User interface-5] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:32.472 DEBUG [TestNG-test-User interface-3] [] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:32.475 DEBUG [TestNG-test-User interface-3] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:32.476 DEBUG [TestNG-test-User interface-2] [] i.a.q.c.d.DriverManager - Active sessions: 6
-09:31:32.476 DEBUG [TestNG-test-User interface-2] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:32.472 DEBUG [TestNG-test-User interface-4] [] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:32.477 DEBUG [TestNG-test-User interface-4] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:32.483 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.l.TestReportListener - ──────── START secondWindowIsReadAndClosed ────────
-09:31:32.483 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.l.TestReportListener - ──────── START deferredRenderingIsAwaited ────────
-09:31:32.483 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.l.TestReportListener - ──────── START nativeDialogsAreHandled ────────
-09:31:32.483 INFO  [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.l.TestReportListener - ──────── START fileIsUploaded ────────
-09:31:32.483 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.l.TestReportListener - ──────── START shadowDomComponentIsDriven ────────
-09:31:32.486 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.l.TestReportListener - ──────── START iframeContentIsReachable ────────
-09:31:33.594 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] WebDriver - navigated to http://127.0.0.1:39099/widgets.html
-09:31:33.620 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] WebDriver - navigated to http://127.0.0.1:39099/widgets.html
-09:31:33.620 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] WebDriver - navigated to http://127.0.0.1:39099/widgets.html
-09:31:33.630 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] WebDriver - navigated to http://127.0.0.1:39099/widgets.html
-09:31:33.635 INFO  [TestNG-test-User interface-2] [fileIsUploaded] WebDriver - navigated to http://127.0.0.1:39099/widgets.html
-09:31:33.653 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] WebDriver - navigated to http://127.0.0.1:39099/widgets.html
-09:31:33.957 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:39099/widgets.html
-09:31:33.957 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:39099/widgets.html
-09:31:33.958 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:39099/widgets.html
-09:31:33.967 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:39099/widgets.html
-09:31:34.011 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:39099/widgets.html
-09:31:34.023 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:39099/widgets.html
-09:31:34.270 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.s.p.PlaygroundPage - Switched into frame 'Playground: content frame'
-09:31:34.513 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.e.UiElement - read text on 'Playground: selected file name'
-09:31:34.549 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - click on 'Playground: start job'
-09:31:34.625 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.e.UiElement - read text on 'Playground: selected file name'
-09:31:34.716 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
-09:31:34.794 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.e.UiElement - click on 'Frame: acknowledge'
-09:31:34.845 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.e.UiElement - click on 'Playground: open a second tab'
-09:31:35.023 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - click on 'Playground: alert trigger'
-09:31:35.042 INFO  [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.l.TestReportListener - ──────── PASS  fileIsUploaded (2542 ms) ────────
-09:31:35.057 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.e.UiElement - read text on 'Frame: body text'
-09:31:35.061 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
-09:31:35.196 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
-09:31:35.197 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.l.TestReportListener - ──────── PASS  iframeContentIsReachable (2722 ms) ────────
-09:31:35.323 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
-09:31:35.369 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:35.381 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.e.UiElement - read text on 'Second tab: heading'
-09:31:35.400 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:35.434 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
-09:31:35.494 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.l.TestReportListener - ──────── PASS  shadowDomComponentIsDriven (3020 ms) ────────
-09:31:35.612 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
-09:31:35.674 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.l.TestReportListener - ──────── PASS  secondWindowIsReadAndClosed (3198 ms) ────────
-09:31:35.689 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - click on 'Playground: confirm trigger'
-09:31:35.756 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:35.953 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:36.007 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
-09:31:36.035 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
-09:31:36.261 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - click on 'Playground: prompt trigger'
-09:31:36.491 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
-09:31:36.613 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
-09:31:36.614 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.l.TestReportListener - ──────── PASS  nativeDialogsAreHandled (4136 ms) ────────
-09:31:37.106 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
-09:31:37.149 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.d.DriverManager - Active sessions: 1
-09:31:37.575 INFO  [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:37.604 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job result'
-09:31:37.615 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.l.TestReportListener - ──────── PASS  deferredRenderingIsAwaited (5130 ms) ────────
-09:31:37.659 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:37.672 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:37.676 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.l.TestReportListener - ──────── START tableSortsNumerically ────────
-09:31:38.086 INFO  [TestNG-PoolService-6] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:38.153 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.d.DriverManager - Active sessions: 1
-09:31:38.171 DEBUG [TestNG-PoolService-6] [] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:38.171 DEBUG [TestNG-PoolService-6] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:38.181 INFO  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [credentials are case sensitive] ────────
-09:31:38.586 INFO  [TestNG-PoolService-4] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:38.786 DEBUG [TestNG-PoolService-4] [] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:38.816 DEBUG [TestNG-PoolService-4] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:38.818 INFO  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [username left empty] ────────
-09:31:39.163 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] WebDriver - navigated to http://127.0.0.1:39099/widgets.html
-09:31:39.308 INFO  [TestNG-PoolService-2] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:39.337 INFO  [TestNG-PoolService-5] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:39.395 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:39.445 DEBUG [TestNG-PoolService-5] [] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:39.445 DEBUG [TestNG-PoolService-5] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:39.447 DEBUG [TestNG-PoolService-2] [] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:39.447 DEBUG [TestNG-PoolService-2] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:39.448 INFO  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [password left empty] ────────
-09:31:39.449 INFO  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [unknown account] ────────
-09:31:39.470 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.d.DriverManager - Active sessions: 6
-09:31:39.473 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:39.474 INFO  [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.l.TestReportListener - ──────── START signedOutUserCannotReachTheCatalogue ────────
-09:31:39.695 INFO  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:39.705 INFO  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:39.790 INFO  [TestNG-PoolService-3] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:39.810 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:39099/widgets.html
-09:31:39.873 DEBUG [TestNG-PoolService-3] [] i.a.q.c.d.DriverManager - Active sessions: 7
-09:31:39.873 DEBUG [TestNG-PoolService-3] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:39.877 INFO  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [locked account is refused before the pas…] ────────
-09:31:39.980 INFO  [TestNG-PoolService-1] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:40.213 DEBUG [TestNG-PoolService-1] [] i.a.q.c.d.DriverManager - Active sessions: 8
-09:31:40.213 DEBUG [TestNG-PoolService-1] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:40.230 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:40.238 INFO  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [wrong password on a valid account] ────────
-09:31:40.250 INFO  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:40.321 INFO  [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:40.354 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:40.368 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:40.405 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.d.DriverManager - Active sessions: 9
-09:31:40.405 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:40.406 INFO  [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.l.TestReportListener - ──────── START standardUserSignsIn ────────
-09:31:40.521 INFO  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:40.595 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.e.UiElement - click on 'Playground: amount column header'
-09:31:40.688 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:40.725 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:40.752 INFO  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:40.811 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.d.DriverManager - Active sessions: 10
-09:31:40.811 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:40.818 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.l.TestReportListener - ──────── START aLocatorWithoutFallbacksFailsWithAReadableMessage ────────
-09:31:40.903 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:40.954 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - type '' on 'Login: username field'
-09:31:41.013 INFO  [TestNG-test-User interface-5] [standardUserSignsIn] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:41.018 INFO  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:41.099 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:41.237 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.l.TestReportListener - ──────── PASS  tableSortsNumerically (3562 ms) ────────
-09:31:41.252 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:41.438 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:41.545 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:41.665 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:41.832 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.d.DriverManager - Active sessions: 9
-09:31:41.863 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - type 'STANDARD_USER' on 'Login: username field'
-09:31:41.869 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - type 'ghost_user' on 'Login: username field'
-09:31:41.871 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - type 'locked_user' on 'Login: username field'
-09:31:42.028 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:42.070 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:42.096 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:42.097 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:42.118 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:42.196 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:42.205 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.d.DriverManager - Active sessions: 10
-09:31:42.205 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:42.206 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.l.TestReportListener - ──────── START brokenPrimaryStrategyIsHealedAndAudited ────────
-09:31:42.353 WARN  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:42.500 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - type '' on 'Login: password field'
-09:31:42.614 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:42.658 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:42.684 WARN  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:42.702 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:42.803 WARN  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:42.826 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:42.844 WARN  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:42.860 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:42.867 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:42.866 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:42.875 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:43.061 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:43.153 WARN  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:43.155 WARN  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:43.194 WARN  [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:43.194 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:43.226 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:43.330 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
-09:31:43.354 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:43.403 INFO  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [username left empty] (4556 ms) ────────
-09:31:43.504 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
-09:31:43.563 INFO  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [password left empty] (4116 ms) ────────
-09:31:43.566 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:43.616 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:43.619 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:43.703 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:43.730 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
-09:31:43.806 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.d.DriverManager - Active sessions: 9
-09:31:43.825 WARN  [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:43.813 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
-09:31:43.829 INFO  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [unknown account] (4379 ms) ────────
-09:31:43.902 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
-09:31:43.908 INFO  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [locked account is refused before the pas…] (4033 ms) ────────
-09:31:43.923 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.d.DriverManager - Active sessions: 8
-09:31:43.939 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
-09:31:43.961 INFO  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [wrong password on a valid account] (3747 ms) ────────
-09:31:44.026 INFO  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [credentials are case sensitive] (5850 ms) ────────
-09:31:44.205 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.d.DriverManager - Active sessions: 7
-09:31:44.258 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.l.TestReportListener - ──────── PASS  aLocatorWithoutFallbacksFailsWithAReadableMessage (3431 ms) ────────
-09:31:44.334 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.d.DriverManager - Active sessions: 6
-09:31:44.337 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:44.358 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:44.388 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:44.451 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:44.643 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:44.804 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:44.825 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:44.825 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:44.831 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.l.TestReportListener - ──────── START theApplicationReallyRegeneratesIds ────────
-09:31:44.843 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:44.964 WARN  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:45.030 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:45.183 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:45.208 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:45.343 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:45.422 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:45.519 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.e.UiElement - read text on 'Header: signed in user'
-09:31:45.574 INFO  [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.l.TestReportListener - ──────── PASS  standardUserSignsIn (5168 ms) ────────
-09:31:45.618 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:45.690 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.l.TestReportListener - ──────── PASS  theApplicationReallyRegeneratesIds (865 ms) ────────
-09:31:45.812 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:45.947 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:46.115 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - read text on 'Login: error banner'
-09:31:46.123 INFO  [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.l.TestReportListener - ──────── PASS  signedOutUserCannotReachTheCatalogue (6649 ms) ────────
-09:31:46.135 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:46.198 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:46.198 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:46.201 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.l.TestReportListener - ──────── START addingProductsUpdatesTheCart ────────
-09:31:46.346 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:46.392 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:46.395 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.l.TestReportListener - ──────── PASS  brokenPrimaryStrategyIsHealedAndAudited (4189 ms) ────────
-09:31:46.477 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:46.539 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:46.539 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:46.543 INFO  [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.l.TestReportListener - ──────── START catalogueFinishesLoading ────────
-09:31:46.551 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:46.625 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:46.833 INFO  [TestNG-test-User interface-4] [catalogueFinishesLoading] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:46.967 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:47.105 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:47.351 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:47.628 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:47.809 INFO  [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:47.941 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:47.941 DEBUG [TestNG-test-User interface-5] [standardUserSignsIn] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:47.971 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.l.TestReportListener - ──────── START filteringByCategoryNarrowsTheGrid ────────
-09:31:47.947 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:47.981 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:48.002 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:48.003 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:48.009 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.l.TestReportListener - ──────── START outOfStockProductCannotBeAdded ────────
-09:31:48.110 WARN  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:48.281 INFO  [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:48.299 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:48.310 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:48.318 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:48.319 DEBUG [TestNG-test-User interface-6] [signedOutUserCannotReachTheCatalogue] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:48.331 INFO  [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.l.TestReportListener - ──────── START sortingByPriceIsApplied ────────
-09:31:48.392 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:48.405 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:48.471 WARN  [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:48.565 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:48.629 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:48.764 INFO  [TestNG-test-User interface-6] [sortingByPriceIsApplied] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:48.941 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:48.956 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:49.037 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:49.216 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:49.223 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:49.331 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:49.346 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:49.359 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.d.DriverManager - Active sessions: 6
-09:31:49.359 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:49.362 INFO  [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.l.TestReportListener - ──────── START customerCompletesAPurchase ────────
-09:31:49.420 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:49.488 WARN  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:49.579 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:49.626 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:49.693 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:49.694 WARN  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:49.702 INFO  [TestNG-test-User interface-1] [customerCompletesAPurchase] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:49.839 WARN  [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:49.900 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:49.912 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:49.913 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:50.078 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:50.327 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:50.469 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:50.536 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:50.571 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - read text on 'Catalogue: stock label of 'Granite Trekking Poles''
-09:31:50.626 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:50.626 WARN  [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:50.631 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - read enabled state on 'Catalogue: add 'Granite Trekking Poles' to cart'
-09:31:50.634 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.l.TestReportListener - ──────── PASS  outOfStockProductCannotBeAdded (2631 ms) ────────
-09:31:50.734 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:50.744 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:50.853 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - select 'Equipment' on 'Catalogue: category filter'
-09:31:50.908 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.l.TestReportListener - ──────── PASS  filteringByCategoryNarrowsTheGrid (2966 ms) ────────
-09:31:50.993 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:51.050 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:51.242 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - select 'Price (high → low)' on 'Catalogue: sort order'
-09:31:51.520 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:51.591 INFO  [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.l.TestReportListener - ──────── PASS  sortingByPriceIsApplied (3271 ms) ────────
-09:31:51.595 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:51.595 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:51.596 INFO  [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.l.TestReportListener - ──────── START emptyingTheCartDisablesTheCheckout ────────
-09:31:51.601 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Summit Down Jacket' to cart'
-09:31:51.826 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:51.847 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:51.879 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:51.959 INFO  [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:52.033 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:52.079 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:52.108 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:52.108 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:52.111 INFO  [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.l.TestReportListener - ──────── START malformedEmailIsRejected ────────
-09:31:52.186 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Basecamp Headlamp 600' to cart'
-09:31:52.195 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:52.272 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:52.325 INFO  [TestNG-test-User interface-5] [malformedEmailIsRejected] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:52.357 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:52.434 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:52.525 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:52.546 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Summit Down Jacket' to cart'
-09:31:52.671 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:52.769 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:52.777 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:52.785 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:52.872 WARN  [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:53.026 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Header: cart link'
-09:31:53.066 INFO  [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:53.107 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:39099/cart.html
-09:31:53.113 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.d.DriverManager - Active sessions: 6
-09:31:53.114 DEBUG [TestNG-test-User interface-6] [sortingByPriceIsApplied] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:53.121 INFO  [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.l.TestReportListener - ──────── START mandatoryFieldsAreEnforced ────────
-09:31:53.127 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:53.133 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:53.182 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Cart: quantity of 'Summit Down Jacket''
-09:31:53.254 WARN  [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:53.350 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.l.TestReportListener - ──────── PASS  addingProductsUpdatesTheCart (7152 ms) ────────
-09:31:53.362 INFO  [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:53.441 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:53.586 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:53.600 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:53.893 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
-09:31:53.924 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:54.015 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:54.196 WARN  [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:54.264 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Summit Down Jacket' to cart'
-09:31:54.370 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:54.386 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:54.528 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:54.591 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
-09:31:54.615 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.d.DriverManager - Active sessions: 6
-09:31:54.615 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
-09:31:54.616 INFO  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.l.TestReportListener - ──────── START readOnlyAccountCannotPlaceAnOrder ────────
-09:31:54.705 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Basecamp Headlamp 600' to cart'
-09:31:54.727 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:54.770 INFO  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] WebDriver - navigated to http://127.0.0.1:39099/index.html
-09:31:54.806 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:54.876 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:39099/index.html
-09:31:55.033 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Header: cart link'
-09:31:55.105 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:39099/cart.html
-09:31:55.109 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - type 'readonly_user' on 'Login: username field'
-09:31:55.109 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - read text on 'Catalogue: result count'
-09:31:55.110 INFO  [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.l.TestReportListener - ──────── PASS  catalogueFinishesLoading (8566 ms) ────────
-09:31:55.209 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: subtotal'
-09:31:55.244 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.d.DriverManager - Active sessions: 5
-09:31:55.271 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: tax'
-09:31:55.329 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
-09:31:55.331 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: grand total'
-09:31:55.332 INFO  [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.d.FakeData - Synthetic data seed = 1787995915332 (replay this run with -Datlas.data.seed=1787995915332)
-09:31:55.361 WARN  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
-09:31:55.495 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Login: sign in button'
-09:31:55.548 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:55.818 WARN  [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
-09:31:55.966 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
-09:31:56.031 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.s.p.CheckoutDetailsPage - 'Checkout Details Page' loaded at http://127.0.0.1:39099/checkout-info.html
-09:31:56.062 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Vertex Climbing Harness' to cart'
-09:31:56.109 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:56.168 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'Lashonda' on 'Checkout details: first name'
-09:31:56.267 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Header: cart link'
-09:31:56.284 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'Kertzmann' on 'Checkout details: last name'
-09:31:56.300 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:39099/cart.html
-09:31:56.381 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:39099/inventory.html
-09:31:56.407 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Cart: remove 'Vertex Climbing Harness''
-09:31:56.418 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'lurlene.mcclure.8290@atlas.test' on 'Checkout details: email'
-09:31:56.509 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type '089 Willa Trail' on 'Checkout details: address'
-09:31:56.578 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'Hanebury' on 'Checkout details: city'
-09:31:56.653 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'GT5 3HD' on 'Checkout details: postcode'
-09:31:56.679 WARN  [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
-09:31:56.936 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Nomad Merino Base Layer' to cart'
-09:31:57.003 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:57.019 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Checkout details: continue'
-09:31:57.068 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.s.p.CheckoutReviewPage - 'Checkout Review Page' loaded at http://127.0.0.1:39099/checkout-review.html
-09:31:57.109 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: delivery summary'
-09:31:57.137 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: grand total'
-09:31:57.162 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: grand total'
-09:31:57.165 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Header: cart link'
-09:31:57.195 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: grand total'
-09:31:57.196 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:39099/cart.html
-09:31:57.224 WARN  [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
-09:31:57.237 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: grand total'
-09:31:57.277 WARN  [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Checkout review: place order — primary strategy failed (By.id: btn-place-order), recovered with fallback #1 (By.cssSelector: [data-testid='place-order'])
-09:31:57.384 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
-09:31:57.418 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Checkout review: place order'
-09:31:57.425 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.s.p.CheckoutDetailsPage - 'Checkout Details Page' loaded at http://127.0.0.1:39099/checkout-info.html
-09:31:57.445 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.s.p.OrderConfirmationPage - 'Order Confirmation Page' loaded at http://127.0.0.1:39099/checkout-complete.html
-09:31:57.469 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: title'
-09:31:57.501 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: order reference'
-09:31:57.526 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: item count'
-09:31:57.536 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'Lashonda' on 'Checkout details: first name'
-09:31:57.556 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: amount charged'
-09:31:57.557 INFO  [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.l.TestReportListener - ──────── PASS  customerCompletesAPurchase (8198 ms) ────────
-09:31:57.639 DEBUG [TestNG-test-User interface-1] [customerCompletesAPurchase] i.a.q.c.d.DriverManager - Active sessions: 4
-09:31:57.650 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'Kertzmann' on 'Checkout details: last name'
-09:31:57.694 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Nomad Merino Base Layer' to cart'
-09:31:57.736 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:57.755 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'giulia.rossi.atlas.test' on 'Checkout details: email'
-09:31:57.876 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type '089 Willa Trail' on 'Checkout details: address'
-09:31:57.896 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Header: cart link'
-09:31:57.942 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:39099/cart.html
-09:31:57.975 WARN  [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
-09:31:57.976 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'Hanebury' on 'Checkout details: city'
-09:31:58.078 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'GT5 3HD' on 'Checkout details: postcode'
-09:31:58.109 WARN  [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.HealingLedger - [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
-09:31:58.133 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
-09:31:58.165 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.s.p.CheckoutDetailsPage - 'Checkout Details Page' loaded at http://127.0.0.1:39099/checkout-info.html
-09:31:58.204 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Checkout details: continue'
-09:31:58.248 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.e.UiElement - read text on 'Checkout details: error banner'
-09:31:58.248 INFO  [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.l.TestReportListener - ──────── PASS  malformedEmailIsRejected (6139 ms) ────────
-09:31:58.254 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type 'Giulia' on 'Checkout details: first name'
-09:31:58.330 DEBUG [TestNG-test-User interface-5] [malformedEmailIsRejected] i.a.q.c.d.DriverManager - Active sessions: 3
-09:31:58.331 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '' on 'Checkout details: last name'
-09:31:58.364 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '' on 'Checkout details: email'
-09:31:58.400 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '' on 'Checkout details: postcode'
-09:31:58.423 WARN  [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.HealingLedger - [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
-09:31:58.470 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Checkout details: continue'
-09:31:58.507 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - read text on 'Checkout details: error banner'
-09:31:58.509 INFO  [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.l.TestReportListener - ──────── PASS  mandatoryFieldsAreEnforced (5394 ms) ────────
-09:31:58.585 DEBUG [TestNG-test-User interface-6] [mandatoryFieldsAreEnforced] i.a.q.c.d.DriverManager - Active sessions: 2
-09:31:58.649 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Ridge GPS Watch' to cart'
-09:31:58.685 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
-09:31:58.804 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Header: cart link'
-09:31:58.822 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:39099/cart.html
-09:31:58.840 WARN  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
-09:31:58.875 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
-09:31:58.905 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - read text on 'Cart: error banner'
-09:31:58.908 INFO  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.l.TestReportListener - ──────── PASS  readOnlyAccountCannotPlaceAnOrder (4293 ms) ────────
-09:31:58.981 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.d.DriverManager - Active sessions: 1
-09:32:11.549 WARN  [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
-09:32:11.553 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - read enabled state on 'Cart: proceed to checkout'
-09:32:11.553 INFO  [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.l.TestReportListener - ──────── PASS  emptyingTheCartDisablesTheCheckout (19957 ms) ────────
-09:32:11.635 DEBUG [TestNG-test-User interface-2] [emptyingTheCartDisablesTheCheckout] i.a.q.c.d.DriverManager - Active sessions: 0
-09:32:11.959 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] i.a.q.c.l.TestReportListener - ──────── START everyProductIsRetrievableById ────────
-09:32:11.960 INFO  [TestNG-test-Service layer-1] [catalogueHonoursItsSchema] i.a.q.c.l.TestReportListener - ──────── START catalogueHonoursItsSchema ────────
-09:32:11.961 INFO  [TestNG-test-Service layer-3] [healthEndpointIsUp] i.a.q.c.l.TestReportListener - ──────── START healthEndpointIsUp ────────
-09:32:11.962 INFO  [TestNG-test-Service layer-4] [lockedAccountIsRefusedWithADedicatedStatus] i.a.q.c.l.TestReportListener - ──────── START lockedAccountIsRefusedWithADedicatedStatus ────────
-09:32:11.964 INFO  [TestNG-test-Service layer-5] [readOnlyAccountHasNoCheckoutPermission] i.a.q.c.l.TestReportListener - ──────── START readOnlyAccountHasNoCheckoutPermission ────────
-09:32:11.965 INFO  [TestNG-test-Service layer-6] [unknownProductReturnsNotFound] i.a.q.c.l.TestReportListener - ──────── START unknownProductReturnsNotFound ────────
-09:32:12.524 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products → 200 (214 ms)
-09:32:12.524 INFO  [TestNG-test-Service layer-4] [lockedAccountIsRefusedWithADedicatedStatus] RestAssured - POST http://127.0.0.1:39099/api/auth/login → 423 (218 ms)
-09:32:12.525 INFO  [TestNG-test-Service layer-1] [catalogueHonoursItsSchema] RestAssured - GET http://127.0.0.1:39099/api/products → 200 (211 ms)
-09:32:12.526 INFO  [TestNG-test-Service layer-5] [readOnlyAccountHasNoCheckoutPermission] RestAssured - POST http://127.0.0.1:39099/api/auth/login → 200 (216 ms)
-09:32:12.527 INFO  [TestNG-test-Service layer-6] [unknownProductReturnsNotFound] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-999 → 404 (200 ms)
-09:32:12.528 INFO  [TestNG-test-Service layer-3] [healthEndpointIsUp] RestAssured - GET http://127.0.0.1:39099/api/health → 200 (217 ms)
-09:32:13.265 INFO  [TestNG-test-Service layer-3] [healthEndpointIsUp] i.a.q.c.l.TestReportListener - ──────── PASS  healthEndpointIsUp (1304 ms) ────────
-09:32:13.266 INFO  [TestNG-test-Service layer-4] [lockedAccountIsRefusedWithADedicatedStatus] i.a.q.c.l.TestReportListener - ──────── PASS  lockedAccountIsRefusedWithADedicatedStatus (1302 ms) ────────
-09:32:13.270 INFO  [TestNG-test-Service layer-4] [wrongPasswordIsRefused] i.a.q.c.l.TestReportListener - ──────── START wrongPasswordIsRefused ────────
-09:32:13.267 INFO  [TestNG-test-Service layer-5] [readOnlyAccountHasNoCheckoutPermission] i.a.q.c.l.TestReportListener - ──────── PASS  readOnlyAccountHasNoCheckoutPermission (1304 ms) ────────
-09:32:13.266 INFO  [TestNG-test-Service layer-6] [unknownProductReturnsNotFound] i.a.q.c.l.TestReportListener - ──────── PASS  unknownProductReturnsNotFound (1301 ms) ────────
-09:32:13.270 INFO  [TestNG-test-Service layer-3] [validCredentialsReturnAToken] i.a.q.c.l.TestReportListener - ──────── START validCredentialsReturnAToken ────────
-09:32:13.294 INFO  [TestNG-test-Service layer-1] [catalogueHonoursItsSchema] i.a.q.c.l.TestReportListener - ──────── PASS  catalogueHonoursItsSchema (1334 ms) ────────
-09:32:13.296 INFO  [TestNG-test-Service layer-4] [wrongPasswordIsRefused] RestAssured - POST http://127.0.0.1:39099/api/auth/login → 401 (18 ms)
-09:32:13.298 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-001 → 200 (27 ms)
-09:32:13.298 INFO  [TestNG-test-Service layer-3] [validCredentialsReturnAToken] RestAssured - POST http://127.0.0.1:39099/api/auth/login → 200 (19 ms)
-09:32:13.305 INFO  [TestNG-test-Service layer-4] [wrongPasswordIsRefused] i.a.q.c.l.TestReportListener - ──────── PASS  wrongPasswordIsRefused (35 ms) ────────
-09:32:13.318 INFO  [TestNG-test-Service layer-3] [validCredentialsReturnAToken] i.a.q.c.l.TestReportListener - ──────── PASS  validCredentialsReturnAToken (48 ms) ────────
-09:32:13.329 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-002 → 200 (10 ms)
-09:32:13.350 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-003 → 200 (7 ms)
-09:32:13.371 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-004 → 200 (7 ms)
-09:32:13.390 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-005 → 200 (7 ms)
-09:32:13.409 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-006 → 200 (7 ms)
-09:32:13.428 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-007 → 200 (6 ms)
-09:32:13.448 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:39099/api/products/ATL-008 → 200 (8 ms)
-09:32:13.457 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] i.a.q.c.l.TestReportListener - ──────── PASS  everyProductIsRetrievableById (1498 ms) ────────
-09:32:13.742 INFO  [main] [] i.a.q.c.r.ReportManager - Report flushed to /home/runner/work/atlas-test-framework/atlas-test-framework/target/atlas-report/index.html
-09:32:13.743 WARN  [main] [] i.a.q.c.l.SuiteLifecycleListener - Locator health: 4 element(s) required a fallback during this run
-09:32:13.743 WARN  [main] [] i.a.q.c.l.SuiteLifecycleListener - Maintenance backlog written to /home/runner/work/atlas-test-framework/atlas-test-framework/target/atlas-report/locator-backlog.md
-09:32:13.743 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener - Suite 'ATLAS · regression' finished
-09:32:13.848 INFO  [atlas-sandbox-shutdown] [] i.a.q.c.s.SandboxServer - Sandbox application under test stopped
+08:38:32.428 DEBUG [main] [] i.a.q.c.c.ConfigLoader - Loaded 22 keys from config/atlas.properties
+08:38:32.429 DEBUG [main] [] i.a.q.c.c.ConfigLoader - Loaded 2 keys from config/atlas-sandbox.properties
+08:38:32.431 INFO  [main] [] i.a.q.c.c.ConfigLoader - Configuration resolved for environment 'sandbox' (22 keys)
+08:38:32.432 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   browser = chrome
+08:38:32.432 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   credentials.password = ********
+08:38:32.432 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   credentials.username = standard_user
+08:38:32.432 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   env = sandbox
+08:38:32.433 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   gridUrl = http://localhost:4444/wd/hub
+08:38:32.433 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   headless = true
+08:38:32.433 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   locator.selfHealing = true
+08:38:32.433 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   remote = false
+08:38:32.433 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.author = QA Automation
+08:38:32.433 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.directory = target/atlas-report
+08:38:32.434 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.screenshotOnFailure = true
+08:38:32.434 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.screenshotOnStep = false
+08:38:32.434 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   report.title = ATLAS â Automation Report
+08:38:32.434 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   retry.count = 1
+08:38:32.435 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   sandbox.advertisedHost = 127.0.0.1
+08:38:32.435 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   sandbox.bindAddress = 127.0.0.1
+08:38:32.435 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   sandbox.port = 0
+08:38:32.435 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.explicit = 15
+08:38:32.435 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.pageLoad = 40
+08:38:32.436 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.pollingMillis = 200
+08:38:32.436 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   timeout.script = 30
+08:38:32.436 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   window.size = 1920,1080
+08:38:32.540 INFO  [main] [] i.a.q.c.s.SandboxServer - Sandbox application under test started on http://127.0.0.1:32849
+08:38:32.541 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener -   application under test = http://127.0.0.1:32849
+08:38:32.698 INFO  [main] [] i.a.q.c.r.ReportManager - HTML report will be written to /home/runner/work/atlas-test-framework/atlas-test-framework/target/atlas-report/index.html
+08:38:36.663 INFO  [TestNG-test-User interface-5] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:36.663 INFO  [TestNG-test-User interface-2] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:36.668 INFO  [TestNG-test-User interface-6] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:36.676 INFO  [TestNG-test-User interface-4] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:36.681 INFO  [TestNG-test-User interface-1] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:36.691 INFO  [TestNG-test-User interface-3] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:37.470 DEBUG [TestNG-test-User interface-3] [] i.a.q.c.d.DriverManager - Active sessions: 1
+08:38:37.470 DEBUG [TestNG-test-User interface-3] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:37.471 DEBUG [TestNG-test-User interface-1] [] i.a.q.c.d.DriverManager - Active sessions: 2
+08:38:37.471 DEBUG [TestNG-test-User interface-1] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:37.473 DEBUG [TestNG-test-User interface-5] [] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:37.473 DEBUG [TestNG-test-User interface-5] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:37.471 DEBUG [TestNG-test-User interface-6] [] i.a.q.c.d.DriverManager - Active sessions: 3
+08:38:37.474 DEBUG [TestNG-test-User interface-6] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:37.474 DEBUG [TestNG-test-User interface-2] [] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:37.474 DEBUG [TestNG-test-User interface-2] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:37.481 DEBUG [TestNG-test-User interface-4] [] i.a.q.c.d.DriverManager - Active sessions: 6
+08:38:37.481 DEBUG [TestNG-test-User interface-4] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:37.494 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.l.TestReportListener - ──────── START nativeDialogsAreHandled ────────
+08:38:37.494 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.l.TestReportListener - ──────── START secondWindowIsReadAndClosed ────────
+08:38:37.494 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.l.TestReportListener - ──────── START iframeContentIsReachable ────────
+08:38:37.494 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.l.TestReportListener - ──────── START deferredRenderingIsAwaited ────────
+08:38:37.494 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.l.TestReportListener - ──────── START shadowDomComponentIsDriven ────────
+08:38:37.493 INFO  [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.l.TestReportListener - ──────── START fileIsUploaded ────────
+08:38:38.176 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] WebDriver - navigated to http://127.0.0.1:32849/widgets.html
+08:38:38.264 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] WebDriver - navigated to http://127.0.0.1:32849/widgets.html
+08:38:38.270 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] WebDriver - navigated to http://127.0.0.1:32849/widgets.html
+08:38:38.318 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] WebDriver - navigated to http://127.0.0.1:32849/widgets.html
+08:38:38.320 INFO  [TestNG-test-User interface-2] [fileIsUploaded] WebDriver - navigated to http://127.0.0.1:32849/widgets.html
+08:38:38.322 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] WebDriver - navigated to http://127.0.0.1:32849/widgets.html
+08:38:38.585 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:32849/widgets.html
+08:38:38.590 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:32849/widgets.html
+08:38:38.594 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:32849/widgets.html
+08:38:38.596 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:32849/widgets.html
+08:38:38.649 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:32849/widgets.html
+08:38:38.675 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:32849/widgets.html
+08:38:38.767 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.s.p.PlaygroundPage - Switched into frame 'Playground: content frame'
+08:38:38.901 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - click on 'Playground: start job'
+08:38:38.963 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.e.UiElement - read text on 'Playground: selected file name'
+08:38:39.000 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - click on 'Playground: alert trigger'
+08:38:39.053 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
+08:38:39.075 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.e.UiElement - read text on 'Playground: selected file name'
+08:38:39.082 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.e.UiElement - click on 'Playground: open a second tab'
+08:38:39.194 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.e.UiElement - click on 'Frame: acknowledge'
+08:38:39.265 INFO  [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.l.TestReportListener - ──────── PASS  fileIsUploaded (1788 ms) ────────
+08:38:39.279 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.e.UiElement - read text on 'Frame: body text'
+08:38:39.339 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
+08:38:39.340 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.e.UiElement - read text on 'Second tab: heading'
+08:38:39.354 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
+08:38:39.356 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.l.TestReportListener - ──────── PASS  iframeContentIsReachable (1882 ms) ────────
+08:38:39.399 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
+08:38:39.482 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:39.528 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:39.566 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.l.TestReportListener - ──────── PASS  secondWindowIsReadAndClosed (2093 ms) ────────
+08:38:39.635 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
+08:38:39.728 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - click on 'Playground: confirm trigger'
+08:38:39.744 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.d.DriverManager - Active sessions: 3
+08:38:39.865 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
+08:38:39.896 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.l.TestReportListener - ──────── PASS  shadowDomComponentIsDriven (2421 ms) ────────
+08:38:40.092 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
+08:38:40.118 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.d.DriverManager - Active sessions: 2
+08:38:40.231 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - click on 'Playground: prompt trigger'
+08:38:40.525 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.e.UiElement - read text on 'Playground: dialog outcome'
+08:38:40.526 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.l.TestReportListener - ──────── PASS  nativeDialogsAreHandled (3045 ms) ────────
+08:38:40.553 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
+08:38:40.923 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.d.DriverManager - Active sessions: 1
+08:38:40.952 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job status'
+08:38:41.170 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.e.UiElement - read text on 'Playground: job result'
+08:38:41.170 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.l.TestReportListener - ──────── PASS  deferredRenderingIsAwaited (3698 ms) ────────
+08:38:41.570 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.d.DriverManager - Active sessions: 0
+08:38:41.810 INFO  [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:42.066 INFO  [TestNG-PoolService-6] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:42.077 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.d.DriverManager - Active sessions: 1
+08:38:42.079 DEBUG [TestNG-test-User interface-2] [fileIsUploaded] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:42.089 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.l.TestReportListener - ──────── START tableSortsNumerically ────────
+08:38:42.178 DEBUG [TestNG-PoolService-6] [] i.a.q.c.d.DriverManager - Active sessions: 2
+08:38:42.178 DEBUG [TestNG-PoolService-6] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:42.205 INFO  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [credentials are case sensitive] ────────
+08:38:42.881 INFO  [TestNG-PoolService-1] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:43.043 INFO  [TestNG-PoolService-2] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:43.054 INFO  [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:43.160 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.d.DriverManager - Active sessions: 3
+08:38:43.166 DEBUG [TestNG-test-User interface-5] [secondWindowIsReadAndClosed] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:43.170 INFO  [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.l.TestReportListener - ──────── START signedOutUserCannotReachTheCatalogue ────────
+08:38:43.203 INFO  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:43.208 DEBUG [TestNG-PoolService-1] [] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:43.208 DEBUG [TestNG-PoolService-1] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:43.217 INFO  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [wrong password on a valid account] ────────
+08:38:43.261 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] WebDriver - navigated to http://127.0.0.1:32849/widgets.html
+08:38:43.270 DEBUG [TestNG-PoolService-2] [] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:43.270 DEBUG [TestNG-PoolService-2] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:43.276 INFO  [TestNG-PoolService-5] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:43.286 INFO  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [unknown account] ────────
+08:38:43.353 INFO  [TestNG-PoolService-4] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:43.406 DEBUG [TestNG-PoolService-5] [] i.a.q.c.d.DriverManager - Active sessions: 6
+08:38:43.406 DEBUG [TestNG-PoolService-5] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:43.410 INFO  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [password left empty] ────────
+08:38:43.512 DEBUG [TestNG-PoolService-4] [] i.a.q.c.d.DriverManager - Active sessions: 7
+08:38:43.512 DEBUG [TestNG-PoolService-4] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:43.513 INFO  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [username left empty] ────────
+08:38:43.580 INFO  [TestNG-PoolService-3] [] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:43.683 INFO  [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:43.789 DEBUG [TestNG-PoolService-3] [] i.a.q.c.d.DriverManager - Active sessions: 8
+08:38:43.820 DEBUG [TestNG-PoolService-3] [] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:43.846 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:43.867 INFO  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.l.TestReportListener - ──────── START rejectedSignIn [locked account is refused before the pas…] ────────
+08:38:43.978 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.d.DriverManager - Active sessions: 9
+08:38:43.979 DEBUG [TestNG-test-User interface-6] [shadowDomComponentIsDriven] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:43.979 INFO  [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.l.TestReportListener - ──────── START standardUserSignsIn ────────
+08:38:44.064 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.s.p.PlaygroundPage - 'Playground Page' loaded at http://127.0.0.1:32849/widgets.html
+08:38:44.144 INFO  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:44.341 INFO  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:44.410 INFO  [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:44.661 INFO  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:44.675 INFO  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:44.790 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:44.964 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.e.UiElement - click on 'Playground: amount column header'
+08:38:45.164 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:45.181 INFO  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:45.224 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:45.308 INFO  [TestNG-test-User interface-6] [standardUserSignsIn] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:45.404 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:45.405 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - type 'STANDARD_USER' on 'Login: username field'
+08:38:45.405 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:45.513 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.l.TestReportListener - ──────── PASS  tableSortsNumerically (3433 ms) ────────
+08:38:45.651 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - type '' on 'Login: username field'
+08:38:45.723 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:45.708 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:45.813 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - type 'ghost_user' on 'Login: username field'
+08:38:45.951 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.d.DriverManager - Active sessions: 8
+08:38:46.051 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:46.052 INFO  [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:46.158 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:46.193 INFO  [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:46.195 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.d.DriverManager - Active sessions: 9
+08:38:46.195 DEBUG [TestNG-test-User interface-4] [nativeDialogsAreHandled] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:46.195 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.l.TestReportListener - ──────── START aLocatorWithoutFallbacksFailsWithAReadableMessage ────────
+08:38:46.245 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:46.358 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.d.DriverManager - Active sessions: 10
+08:38:46.366 DEBUG [TestNG-test-User interface-1] [deferredRenderingIsAwaited] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:46.368 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:46.369 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.l.TestReportListener - ──────── START brokenPrimaryStrategyIsHealedAndAudited ────────
+08:38:46.411 WARN  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:46.452 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - type '' on 'Login: password field'
+08:38:46.641 WARN  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:46.743 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:46.746 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - type 'locked_user' on 'Login: username field'
+08:38:46.770 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:46.786 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:46.819 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:46.954 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:46.979 WARN  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:46.984 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:46.985 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:47.056 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:47.082 WARN  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:47.104 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:47.216 WARN  [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:47.238 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:47.337 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:47.345 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:47.420 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:47.462 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:47.475 WARN  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:47.492 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
+08:38:47.575 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:47.583 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:47.605 WARN  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:47.606 INFO  [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [password left empty] (4156 ms) ────────
+08:38:47.708 WARN  [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:47.744 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
+08:38:47.789 INFO  [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [credentials are case sensitive] (5610 ms) ────────
+08:38:47.893 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
+08:38:47.961 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:47.968 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
+08:38:47.989 INFO  [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [unknown account] (4718 ms) ────────
+08:38:48.030 DEBUG [TestNG-PoolService-5] [rejectedSignIn [password left empty]] i.a.q.c.d.DriverManager - Active sessions: 9
+08:38:48.072 INFO  [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [username left empty] (4558 ms) ────────
+08:38:48.101 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:48.247 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
+08:38:48.262 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:48.293 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:48.317 INFO  [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [wrong password on a valid account] (5108 ms) ────────
+08:38:48.442 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.e.UiElement - read text on 'Login: error banner'
+08:38:48.455 DEBUG [TestNG-PoolService-6] [rejectedSignIn [credentials are case sensitive]] i.a.q.c.d.DriverManager - Active sessions: 8
+08:38:48.472 DEBUG [TestNG-PoolService-2] [rejectedSignIn [unknown account]] i.a.q.c.d.DriverManager - Active sessions: 7
+08:38:48.476 DEBUG [TestNG-PoolService-4] [rejectedSignIn [username left empty]] i.a.q.c.d.DriverManager - Active sessions: 6
+08:38:48.505 INFO  [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.l.TestReportListener - ──────── PASS  rejectedSignIn [locked account is refused before the pas…] (4678 ms) ────────
+08:38:48.733 DEBUG [TestNG-PoolService-1] [rejectedSignIn [wrong password on a valid account]] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:48.791 DEBUG [TestNG-PoolService-3] [rejectedSignIn [locked account is refused before the pas…]] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:48.940 INFO  [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:48.959 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:48.992 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:48.992 DEBUG [TestNG-test-User interface-2] [tableSortsNumerically] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:48.996 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.l.TestReportListener - ──────── START theApplicationReallyRegeneratesIds ────────
+08:38:49.013 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:49.066 WARN  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:49.205 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:49.255 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:49.255 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.l.TestReportListener - ──────── PASS  aLocatorWithoutFallbacksFailsWithAReadableMessage (3060 ms) ────────
+08:38:49.417 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:49.497 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:49.602 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.e.UiElement - read text on 'Login: error banner'
+08:38:49.614 INFO  [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.l.TestReportListener - ──────── PASS  signedOutUserCannotReachTheCatalogue (6437 ms) ────────
+08:38:49.767 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:49.801 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.d.DriverManager - Active sessions: 3
+08:38:49.861 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.l.TestReportListener - ──────── PASS  theApplicationReallyRegeneratesIds (868 ms) ────────
+08:38:49.910 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:49.962 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:49.982 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.l.TestReportListener - ──────── PASS  brokenPrimaryStrategyIsHealedAndAudited (3616 ms) ────────
+08:38:50.118 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.e.UiElement - read text on 'Header: signed in user'
+08:38:50.127 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.d.DriverManager - Active sessions: 2
+08:38:50.139 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.d.DriverManager - Active sessions: 1
+08:38:50.182 INFO  [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.l.TestReportListener - ──────── PASS  standardUserSignsIn (6200 ms) ────────
+08:38:50.383 INFO  [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:50.386 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.d.DriverManager - Active sessions: 0
+08:38:50.452 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.d.DriverManager - Active sessions: 1
+08:38:50.452 DEBUG [TestNG-test-User interface-3] [iframeContentIsReachable] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:50.458 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.l.TestReportListener - ──────── START addingProductsUpdatesTheCart ────────
+08:38:50.713 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:50.988 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:51.244 INFO  [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:51.256 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:51.378 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.d.DriverManager - Active sessions: 2
+08:38:51.378 DEBUG [TestNG-test-User interface-4] [aLocatorWithoutFallbacksFailsWithAReadableMessage] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:51.379 INFO  [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.l.TestReportListener - ──────── START catalogueFinishesLoading ────────
+08:38:51.761 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:51.820 INFO  [TestNG-test-User interface-4] [catalogueFinishesLoading] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:51.882 INFO  [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:51.995 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.d.DriverManager - Active sessions: 3
+08:38:51.995 DEBUG [TestNG-test-User interface-5] [signedOutUserCannotReachTheCatalogue] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:52.023 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.l.TestReportListener - ──────── START filteringByCategoryNarrowsTheGrid ────────
+08:38:52.031 WARN  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:52.045 INFO  [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:52.152 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:52.163 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:52.163 DEBUG [TestNG-test-User interface-6] [standardUserSignsIn] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:52.187 INFO  [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.l.TestReportListener - ──────── START customerCompletesAPurchase ────────
+08:38:52.333 INFO  [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:52.399 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:52.410 DEBUG [TestNG-test-User interface-1] [brokenPrimaryStrategyIsHealedAndAudited] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:52.410 INFO  [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.l.TestReportListener - ──────── START sortingByPriceIsApplied ────────
+08:38:52.411 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:52.501 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:52.645 INFO  [TestNG-test-User interface-6] [customerCompletesAPurchase] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:52.773 INFO  [TestNG-test-User interface-1] [sortingByPriceIsApplied] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:52.824 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:52.832 INFO  [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:52.868 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:52.871 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.d.DriverManager - Active sessions: 6
+08:38:52.871 DEBUG [TestNG-test-User interface-2] [theApplicationReallyRegeneratesIds] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:52.871 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.l.TestReportListener - ──────── START outOfStockProductCannotBeAdded ────────
+08:38:52.972 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:53.022 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:53.197 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:53.243 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:53.297 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:53.365 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:53.380 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:53.444 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:53.482 WARN  [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:53.622 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:53.705 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:53.736 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:53.752 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:53.787 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:53.877 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:53.888 WARN  [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:53.895 WARN  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:53.990 WARN  [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:54.051 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:54.084 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:54.143 WARN  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:54.208 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:54.217 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:54.248 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:54.579 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:54.681 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:54.860 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:54.894 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:54.972 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.e.UiElement - select 'Equipment' on 'Catalogue: category filter'
+08:38:55.012 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.e.UiElement - select 'Price (high → low)' on 'Catalogue: sort order'
+08:38:55.064 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.l.TestReportListener - ──────── PASS  filteringByCategoryNarrowsTheGrid (3067 ms) ────────
+08:38:55.089 INFO  [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.l.TestReportListener - ──────── PASS  sortingByPriceIsApplied (2678 ms) ────────
+08:38:55.174 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:55.198 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:55.208 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:55.252 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - read text on 'Catalogue: stock label of 'Granite Trekking Poles''
+08:38:55.296 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.e.UiElement - read enabled state on 'Catalogue: add 'Granite Trekking Poles' to cart'
+08:38:55.297 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.l.TestReportListener - ──────── PASS  outOfStockProductCannotBeAdded (2425 ms) ────────
+08:38:55.392 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.d.DriverManager - Active sessions: 3
+08:38:55.962 INFO  [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:56.006 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Summit Down Jacket' to cart'
+08:38:56.040 INFO  [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:56.043 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.d.DriverManager - Active sessions: 4
+08:38:56.043 DEBUG [TestNG-test-User interface-1] [sortingByPriceIsApplied] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:56.044 INFO  [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.l.TestReportListener - ──────── START malformedEmailIsRejected ────────
+08:38:56.082 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:56.082 DEBUG [TestNG-test-User interface-5] [filteringByCategoryNarrowsTheGrid] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:56.084 INFO  [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.l.TestReportListener - ──────── START emptyingTheCartDisablesTheCheckout ────────
+08:38:56.253 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:56.435 INFO  [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:56.440 INFO  [TestNG-test-User interface-1] [malformedEmailIsRejected] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:56.507 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:56.559 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:56.605 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:56.774 INFO  [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:56.810 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Basecamp Headlamp 600' to cart'
+08:38:56.829 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.d.DriverManager - Active sessions: 6
+08:38:56.829 DEBUG [TestNG-test-User interface-2] [outOfStockProductCannotBeAdded] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:56.830 INFO  [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.l.TestReportListener - ──────── START mandatoryFieldsAreEnforced ────────
+08:38:56.904 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:56.918 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:56.959 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:57.032 INFO  [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:57.082 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:57.158 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:57.227 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:57.229 WARN  [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:57.233 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:57.293 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Summit Down Jacket' to cart'
+08:38:57.323 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Summit Down Jacket' to cart'
+08:38:57.333 WARN  [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:57.376 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:57.445 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:57.466 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:57.518 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:57.617 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:57.618 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type 'standard_user' on 'Login: username field'
+08:38:57.638 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:57.777 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Basecamp Headlamp 600' to cart'
+08:38:57.793 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:57.857 WARN  [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:57.883 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:38:57.912 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - click on 'Header: cart link'
+08:38:57.945 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:57.981 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:32849/cart.html
+08:38:58.077 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.e.UiElement - read text on 'Cart: quantity of 'Summit Down Jacket''
+08:38:58.147 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Header: cart link'
+08:38:58.161 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.l.TestReportListener - ──────── PASS  addingProductsUpdatesTheCart (7708 ms) ────────
+08:38:58.208 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:32849/cart.html
+08:38:58.244 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: subtotal'
+08:38:58.281 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: tax'
+08:38:58.313 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:58.345 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: grand total'
+08:38:58.346 INFO  [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.d.FakeData - Synthetic data seed = 1788079138346 (replay this run with -Datlas.data.seed=1788079138346)
+08:38:58.346 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:58.370 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:58.893 WARN  [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+08:38:59.109 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
+08:38:59.110 INFO  [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.d.DriverFactory - Session started | browser=chrome | headless=true | remote=false
+08:38:59.145 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.d.DriverManager - Active sessions: 6
+08:38:59.145 DEBUG [TestNG-test-User interface-3] [addingProductsUpdatesTheCart] i.a.q.c.r.ReportManager - [no report bound] Browser session started on chrome (local)
+08:38:59.149 INFO  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.l.TestReportListener - ──────── START readOnlyAccountCannotPlaceAnOrder ────────
+08:38:59.188 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.s.p.CheckoutDetailsPage - 'Checkout Details Page' loaded at http://127.0.0.1:32849/checkout-info.html
+08:38:59.199 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:38:59.277 INFO  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] WebDriver - navigated to http://127.0.0.1:32849/index.html
+08:38:59.336 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'Veola' on 'Checkout details: first name'
+08:38:59.361 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.s.p.LoginPage - 'Login Page' loaded at http://127.0.0.1:32849/index.html
+08:38:59.494 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'Feest' on 'Checkout details: last name'
+08:38:59.525 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - type 'readonly_user' on 'Login: username field'
+08:38:59.634 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - type '********' on 'Login: password field'
+08:38:59.665 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'julianna.feest.2226@atlas.test' on 'Checkout details: email'
+08:38:59.671 WARN  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.HealingLedger - [HEALED] Login: sign in button — primary strategy failed (By.id: btn-login), recovered with fallback #1 (By.cssSelector: [data-testid='login-submit'])
+08:38:59.689 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.e.UiElement - read text on 'Catalogue: result count'
+08:38:59.691 INFO  [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.l.TestReportListener - ──────── PASS  catalogueFinishesLoading (8311 ms) ────────
+08:38:59.755 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Login: sign in button'
+08:38:59.807 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type '854 Bednar Prairie' on 'Checkout details: address'
+08:38:59.829 DEBUG [TestNG-test-User interface-4] [catalogueFinishesLoading] i.a.q.c.d.DriverManager - Active sessions: 5
+08:38:59.955 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'Kshlerinfort' on 'Checkout details: city'
+08:39:00.038 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - type 'E32 6JH' on 'Checkout details: postcode'
+08:39:00.066 WARN  [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
+08:39:00.342 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Checkout details: continue'
+08:39:00.382 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.s.p.CheckoutReviewPage - 'Checkout Review Page' loaded at http://127.0.0.1:32849/checkout-review.html
+08:39:00.416 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: delivery summary'
+08:39:00.449 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: grand total'
+08:39:00.464 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Cart: grand total'
+08:39:00.481 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: grand total'
+08:39:00.499 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Checkout review: grand total'
+08:39:00.526 WARN  [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.HealingLedger - [HEALED] Checkout review: place order — primary strategy failed (By.id: btn-place-order), recovered with fallback #1 (By.cssSelector: [data-testid='place-order'])
+08:39:00.626 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Nomad Merino Base Layer' to cart'
+08:39:00.639 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Vertex Climbing Harness' to cart'
+08:39:00.640 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.s.p.InventoryPage - 'Inventory Page' loaded at http://127.0.0.1:32849/inventory.html
+08:39:00.692 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:39:00.697 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:39:00.710 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - click on 'Checkout review: place order'
+08:39:00.746 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.s.p.OrderConfirmationPage - 'Order Confirmation Page' loaded at http://127.0.0.1:32849/checkout-complete.html
+08:39:00.773 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: title'
+08:39:00.844 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: order reference'
+08:39:00.879 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Header: cart link'
+08:39:00.881 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Header: cart link'
+08:39:00.922 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: item count'
+08:39:00.927 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:32849/cart.html
+08:39:00.930 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:32849/cart.html
+08:39:00.963 WARN  [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+08:39:00.966 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.e.UiElement - read text on 'Confirmation: amount charged'
+08:39:00.967 INFO  [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.l.TestReportListener - ──────── PASS  customerCompletesAPurchase (8803 ms) ────────
+08:39:01.057 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - click on 'Cart: remove 'Vertex Climbing Harness''
+08:39:01.073 DEBUG [TestNG-test-User interface-6] [customerCompletesAPurchase] i.a.q.c.d.DriverManager - Active sessions: 4
+08:39:01.168 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
+08:39:01.202 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.s.p.CheckoutDetailsPage - 'Checkout Details Page' loaded at http://127.0.0.1:32849/checkout-info.html
+08:39:01.297 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'Veola' on 'Checkout details: first name'
+08:39:01.376 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Nomad Merino Base Layer' to cart'
+08:39:01.384 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'Feest' on 'Checkout details: last name'
+08:39:01.421 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:39:01.482 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'giulia.rossi.atlas.test' on 'Checkout details: email'
+08:39:01.565 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Header: cart link'
+08:39:01.598 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type '854 Bednar Prairie' on 'Checkout details: address'
+08:39:01.610 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:32849/cart.html
+08:39:01.634 WARN  [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+08:39:01.690 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'Kshlerinfort' on 'Checkout details: city'
+08:39:01.754 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
+08:39:01.789 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.s.p.CheckoutDetailsPage - 'Checkout Details Page' loaded at http://127.0.0.1:32849/checkout-info.html
+08:39:01.792 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - type 'E32 6JH' on 'Checkout details: postcode'
+08:39:01.833 WARN  [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.HealingLedger - [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
+08:39:01.900 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - click on 'Checkout details: continue'
+08:39:01.900 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type 'Giulia' on 'Checkout details: first name'
+08:39:01.943 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '' on 'Checkout details: last name'
+08:39:01.950 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.e.UiElement - read text on 'Checkout details: error banner'
+08:39:01.951 INFO  [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.l.TestReportListener - ──────── PASS  malformedEmailIsRejected (5906 ms) ────────
+08:39:02.033 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '' on 'Checkout details: email'
+08:39:02.037 DEBUG [TestNG-test-User interface-1] [malformedEmailIsRejected] i.a.q.c.d.DriverManager - Active sessions: 3
+08:39:02.068 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - type '' on 'Checkout details: postcode'
+08:39:02.094 WARN  [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.HealingLedger - [HEALED] Checkout details: continue — primary strategy failed (By.id: btn-continue), recovered with fallback #1 (By.cssSelector: [data-testid='continue'])
+08:39:02.137 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - click on 'Checkout details: continue'
+08:39:02.172 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.e.UiElement - read text on 'Checkout details: error banner'
+08:39:02.173 INFO  [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.l.TestReportListener - ──────── PASS  mandatoryFieldsAreEnforced (5344 ms) ────────
+08:39:02.249 DEBUG [TestNG-test-User interface-2] [mandatoryFieldsAreEnforced] i.a.q.c.d.DriverManager - Active sessions: 2
+08:39:02.731 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Catalogue: add 'Ridge GPS Watch' to cart'
+08:39:02.765 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - read text on 'Header: cart badge'
+08:39:02.881 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Header: cart link'
+08:39:02.898 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.s.p.CartPage - 'Cart Page' loaded at http://127.0.0.1:32849/cart.html
+08:39:02.916 WARN  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+08:39:02.950 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - click on 'Cart: proceed to checkout'
+08:39:02.977 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.e.UiElement - read text on 'Cart: error banner'
+08:39:02.981 INFO  [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.l.TestReportListener - ──────── PASS  readOnlyAccountCannotPlaceAnOrder (3836 ms) ────────
+08:39:03.054 DEBUG [TestNG-test-User interface-3] [readOnlyAccountCannotPlaceAnOrder] i.a.q.c.d.DriverManager - Active sessions: 1
+08:39:16.115 WARN  [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.HealingLedger - [HEALED] Cart: proceed to checkout — primary strategy failed (By.id: btn-checkout), recovered with fallback #1 (By.cssSelector: [data-testid='checkout'])
+08:39:16.120 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.e.UiElement - read enabled state on 'Cart: proceed to checkout'
+08:39:16.121 INFO  [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.l.TestReportListener - ──────── PASS  emptyingTheCartDisablesTheCheckout (20038 ms) ────────
+08:39:16.202 DEBUG [TestNG-test-User interface-5] [emptyingTheCartDisablesTheCheckout] i.a.q.c.d.DriverManager - Active sessions: 0
+08:39:16.552 INFO  [TestNG-test-Service layer-1] [catalogueHonoursItsSchema] i.a.q.c.l.TestReportListener - ──────── START catalogueHonoursItsSchema ────────
+08:39:16.552 INFO  [TestNG-test-Service layer-3] [healthEndpointIsUp] i.a.q.c.l.TestReportListener - ──────── START healthEndpointIsUp ────────
+08:39:16.553 INFO  [TestNG-test-Service layer-5] [readOnlyAccountHasNoCheckoutPermission] i.a.q.c.l.TestReportListener - ──────── START readOnlyAccountHasNoCheckoutPermission ────────
+08:39:16.553 INFO  [TestNG-test-Service layer-4] [lockedAccountIsRefusedWithADedicatedStatus] i.a.q.c.l.TestReportListener - ──────── START lockedAccountIsRefusedWithADedicatedStatus ────────
+08:39:16.553 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] i.a.q.c.l.TestReportListener - ──────── START everyProductIsRetrievableById ────────
+08:39:16.553 INFO  [TestNG-test-Service layer-6] [unknownProductReturnsNotFound] i.a.q.c.l.TestReportListener - ──────── START unknownProductReturnsNotFound ────────
+08:39:17.049 INFO  [TestNG-test-Service layer-5] [readOnlyAccountHasNoCheckoutPermission] RestAssured - POST http://127.0.0.1:32849/api/auth/login → 200 (178 ms)
+08:39:17.050 INFO  [TestNG-test-Service layer-4] [lockedAccountIsRefusedWithADedicatedStatus] RestAssured - POST http://127.0.0.1:32849/api/auth/login → 423 (185 ms)
+08:39:17.051 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products → 200 (185 ms)
+08:39:17.051 INFO  [TestNG-test-Service layer-1] [catalogueHonoursItsSchema] RestAssured - GET http://127.0.0.1:32849/api/products → 200 (180 ms)
+08:39:17.052 INFO  [TestNG-test-Service layer-3] [healthEndpointIsUp] RestAssured - GET http://127.0.0.1:32849/api/health → 200 (182 ms)
+08:39:17.054 INFO  [TestNG-test-Service layer-6] [unknownProductReturnsNotFound] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-999 → 404 (181 ms)
+08:39:17.662 INFO  [TestNG-test-Service layer-6] [unknownProductReturnsNotFound] i.a.q.c.l.TestReportListener - ──────── PASS  unknownProductReturnsNotFound (1109 ms) ────────
+08:39:17.667 INFO  [TestNG-test-Service layer-6] [validCredentialsReturnAToken] i.a.q.c.l.TestReportListener - ──────── START validCredentialsReturnAToken ────────
+08:39:17.663 INFO  [TestNG-test-Service layer-3] [healthEndpointIsUp] i.a.q.c.l.TestReportListener - ──────── PASS  healthEndpointIsUp (1111 ms) ────────
+08:39:17.663 INFO  [TestNG-test-Service layer-4] [lockedAccountIsRefusedWithADedicatedStatus] i.a.q.c.l.TestReportListener - ──────── PASS  lockedAccountIsRefusedWithADedicatedStatus (1110 ms) ────────
+08:39:17.662 INFO  [TestNG-test-Service layer-5] [readOnlyAccountHasNoCheckoutPermission] i.a.q.c.l.TestReportListener - ──────── PASS  readOnlyAccountHasNoCheckoutPermission (1109 ms) ────────
+08:39:17.670 INFO  [TestNG-test-Service layer-3] [wrongPasswordIsRefused] i.a.q.c.l.TestReportListener - ──────── START wrongPasswordIsRefused ────────
+08:39:17.690 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-001 → 200 (21 ms)
+08:39:17.699 INFO  [TestNG-test-Service layer-3] [wrongPasswordIsRefused] RestAssured - POST http://127.0.0.1:32849/api/auth/login → 401 (18 ms)
+08:39:17.707 INFO  [TestNG-test-Service layer-1] [catalogueHonoursItsSchema] i.a.q.c.l.TestReportListener - ──────── PASS  catalogueHonoursItsSchema (1155 ms) ────────
+08:39:17.709 INFO  [TestNG-test-Service layer-6] [validCredentialsReturnAToken] RestAssured - POST http://127.0.0.1:32849/api/auth/login → 200 (22 ms)
+08:39:17.719 INFO  [TestNG-test-Service layer-3] [wrongPasswordIsRefused] i.a.q.c.l.TestReportListener - ──────── PASS  wrongPasswordIsRefused (46 ms) ────────
+08:39:17.727 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-002 → 200 (13 ms)
+08:39:17.731 INFO  [TestNG-test-Service layer-6] [validCredentialsReturnAToken] i.a.q.c.l.TestReportListener - ──────── PASS  validCredentialsReturnAToken (64 ms) ────────
+08:39:17.751 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-003 → 200 (8 ms)
+08:39:17.771 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-004 → 200 (8 ms)
+08:39:17.790 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-005 → 200 (7 ms)
+08:39:17.811 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-006 → 200 (8 ms)
+08:39:17.830 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-007 → 200 (8 ms)
+08:39:17.851 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] RestAssured - GET http://127.0.0.1:32849/api/products/ATL-008 → 200 (8 ms)
+08:39:17.861 INFO  [TestNG-test-Service layer-2] [everyProductIsRetrievableById] i.a.q.c.l.TestReportListener - ──────── PASS  everyProductIsRetrievableById (1309 ms) ────────
+08:39:18.161 INFO  [main] [] i.a.q.c.r.ReportManager - Report flushed to /home/runner/work/atlas-test-framework/atlas-test-framework/target/atlas-report/index.html
+08:39:18.162 WARN  [main] [] i.a.q.c.l.SuiteLifecycleListener - Locator health: 4 element(s) required a fallback during this run
+08:39:18.163 WARN  [main] [] i.a.q.c.l.SuiteLifecycleListener - Maintenance backlog written to /home/runner/work/atlas-test-framework/atlas-test-framework/target/atlas-report/locator-backlog.md
+08:39:18.163 INFO  [main] [] i.a.q.c.l.SuiteLifecycleListener - Suite 'ATLAS · regression' finished
+08:39:18.279 INFO  [atlas-sandbox-shutdown] [] i.a.q.c.s.SandboxServer - Sandbox application under test stopped
